@@ -22,6 +22,7 @@ from radon.complexity import cc_visit
 from radon.metrics import h_visit
 from radon.raw import analyze
 from radon.visitors import ComplexityVisitor
+from file_scope import file_change_counts, source_only
 
 ROOT = Path(__file__).resolve().parent
 GROUPS = {
@@ -89,7 +90,7 @@ def aggregate(files, unavailable=False):
     return result
 
 
-def reconstruct(record):
+def reconstruct(record, file_scope='source-only'):
     evidence, measured = [], []
     unavailable = False
     with tempfile.TemporaryDirectory(prefix='reference-features-') as tmp:
@@ -129,6 +130,8 @@ def reconstruct(record):
         'structural_status': 'unavailable' if unavailable else 'measured' if evidence else 'no_python_files',
         'n_python_files': len(evidence), 'files': evidence,
     }
+    if file_scope == 'source-only':
+        result = source_only(result, file_change_counts(patch_files(record['reference_patch'])), aggregate)
     return result
 
 
@@ -136,6 +139,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--source-bundle', type=Path, required=True)
+    parser.add_argument('--file-scope', choices=['source-only', 'complete-pr'], default='source-only')
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     bundle = args.output / 'sources.jsonl.gz'
@@ -144,10 +148,12 @@ def main():
     with gzip.open(bundle, 'rt', encoding='utf-8') as stream:
         for i, line in enumerate(stream, 1):
             record = json.loads(line)
-            rows[record['dataset']].append(reconstruct(record))
+            rows[record['dataset']].append(reconstruct(record, args.file_scope))
             if i % 50 == 0:
                 print(f'Extracted {i} reference tasks', flush=True)
     manifest = {'source_bundle_sha256': sha(bundle.read_bytes()), 'extractor_sha256': sha(Path(__file__).read_bytes()),
+                'file_scope': args.file_scope,
+                'file_scope_sha256': sha((ROOT / 'file_scope.py').read_bytes()),
                 'definition': 'Strict per-file application of benchmark gold patch to benchmark base; no PR-head fallback.',
                 'missingness': 'MI undefined when HV or LLOC is nonpositive; no-file means missing; any unavailable Python file makes all structural aggregates missing.',
                 'files': {}}

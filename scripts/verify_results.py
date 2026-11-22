@@ -67,9 +67,9 @@ def judge_metrics(pred, truth, include_unknown=False):
 def main(workspace):
     root = workspace.resolve()
     result = {'regression': {}, 'judge': {}, 'outcomes': {},
-              'primary_arrow_analysis': 'arrow_oracle_pass'}
+              'primary_arrow_analysis': 'arrow_oracle_pass', 'feature_scope': 'source-only (exclude tests/)'}
     reg = root / 'experiments/regression/results'
-    scenarios = [(name, reg / 'reference-features-2026-11-09' / name)
+    scenarios = [(name, reg / 'source-only' / name)
                  for name in ('arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures',
                               'arrow_oracle_pass_grouped')]
     verified = reg / 'verified-boolean-outcomes-2026-11-09/verified'
@@ -79,6 +79,13 @@ def main(workspace):
                       ('verified_all_reports', reg / 'reference-features-2026-11-09/verified')]
     for name, folder in scenarios:
         saved = json.loads((folder / 'results.json').read_text())
+        dataset_name = saved['dataset']
+        metric_name = 'pr_metrics.jsonl' if dataset_name == 'arrow' else 'task_metrics.jsonl'
+        feature_records = [json.loads(line) for line in (root/'experiments/regression/inputs-reference'/dataset_name/metric_name).read_text().splitlines()]
+        features_by_id = {(f"pr-{r['pr_number']}" if dataset_name == 'arrow' else r['task_name']): report.ev.feature_vector(r)
+                          for r in feature_records}
+        for row in json.loads((folder/'dataset.json').read_text())['rows']:
+            assert row['features'] == features_by_id[row['task_id']], (name, row['task_id'])
         _, y, p, folds = report.audit(folder, saved)
         _, metrics = report.with_median(y, p, folds)
         result['regression'][name] = {'n': len(y), 'metrics': metrics}
@@ -102,7 +109,35 @@ def main(workspace):
     assert abs(result['regression']['arrow']['metrics']['median']['mae_mean'] - .235) < .0005
     primary = result['regression']['arrow_oracle_pass']
     assert primary['n'] == 55
-    assert abs(primary['metrics']['xgboost']['mae_mean'] - .30438709601421243) < 1e-12
+    for name in ('arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures', 'arrow_oracle_pass_grouped'):
+        current = reg/'source-only'/name
+        previous = reg/'reference-features-2026-11-09'/name
+        assert json.loads((current/'splits.json').read_text()) == json.loads((previous/'splits.json').read_text())
+        new_rows = json.loads((current/'dataset.json').read_text())['rows']
+        old_rows = json.loads((previous/'dataset.json').read_text())['rows']
+        assert [{k:v for k,v in r.items() if k != 'features'} for r in new_rows] == [
+                {k:v for k,v in r.items() if k != 'features'} for r in old_rows]
+        recorded = json.loads((current/'metrics_with_median.json').read_text())
+        for model, values in result['regression'][name]['metrics'].items():
+            for metric in ['mae_mean','mae_std','r2_mean','r2_std']:
+                assert abs(values[metric]-recorded[model][metric]) < 1e-12
+    result['correlations'] = {}
+    expected_corr = json.loads((REPO/'data/results/regression/source_only/correlations.json').read_text())
+    for dataset, folder in [('arrow', reg/'source-only/arrow_oracle_pass')] + ([('verified', verified)] if has_private else []):
+        data = json.loads((folder/'dataset.json').read_text())
+        X = np.asarray([r['features'] for r in data['rows']], dtype=float)
+        y = np.asarray([r['complexity'] for r in data['rows']])
+        rows = []
+        for i, feature in enumerate(data['feature_names']):
+            keep = np.isfinite(X[:, i])
+            rows.append(dict(feature=feature, n=int(keep.sum()),
+                             pearson=float(pearsonr(X[keep, i], y[keep]).statistic),
+                             spearman=float(spearmanr(X[keep, i], y[keep]).statistic)))
+        for actual, expected in zip(rows, expected_corr[dataset], strict=True):
+            assert actual['feature'] == expected['feature'] and actual['n'] == expected['n']
+            assert abs(actual['pearson'] - expected['pearson']) < 1e-12
+            assert abs(actual['spearman'] - expected['spearman']) < 1e-12
+        result['correlations'][dataset] = rows
     if has_private:
         v = result['regression']['verified']
         assert v['n'] == 500

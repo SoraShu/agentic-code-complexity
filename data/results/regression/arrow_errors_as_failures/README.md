@@ -2,6 +2,10 @@
 
 Execution errors counted as failures; 59 tasks.
 
+These are preserved complete-PR features/results, including PR tests. The
+adopted [source-only sensitivity](../source_only/arrow_errors_as_failures/README.md)
+retains these tasks, targets and splits.
+
 - `dataset.json`: feature names, task rows and empirical complexities.
 - `splits.json`: preserved outer and inner task-ID splits.
 - `oof_predictions.csv`: held-out predictions and outer fold assignments.

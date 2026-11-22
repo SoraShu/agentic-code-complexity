@@ -267,7 +267,7 @@ def run(name, policy, output, workers, seed, feature_root=None, splits_from=None
         y = np.asarray([r['complexity'] for r in rows])
     tag = name if name == "verified" or policy == "historical" else f"arrow_{policy}"
     if groups is not None:
-        assert name == 'arrow' and policy == 'oracle_pass' and splits_from is None
+        assert name == 'arrow' and policy == 'oracle_pass'
         tag += '_grouped'
     destination = output / tag
     destination.mkdir(parents=True, exist_ok=False)

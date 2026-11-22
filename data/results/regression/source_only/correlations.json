@@ -1,0 +1,234 @@
+{
+  "verified": [
+    {
+      "feature": "lines_changed",
+      "n": 500,
+      "pearson": 0.3301177168620098,
+      "spearman": 0.3538706840535953
+    },
+    {
+      "feature": "additions",
+      "n": 500,
+      "pearson": 0.3437312685455243,
+      "spearman": 0.3556176002399802
+    },
+    {
+      "feature": "deletions",
+      "n": 500,
+      "pearson": 0.21055010245127284,
+      "spearman": 0.23600302015494695
+    },
+    {
+      "feature": "files_changed",
+      "n": 500,
+      "pearson": 0.21497479168789602,
+      "spearman": 0.3161402449016945
+    },
+    {
+      "feature": "top_level_dirs",
+      "n": 500,
+      "pearson": 0.037646609502745725,
+      "spearman": 0.03440065062570524
+    },
+    {
+      "feature": "second_level_dirs",
+      "n": 500,
+      "pearson": 0.17391386468706502,
+      "spearman": 0.14483454198852727
+    },
+    {
+      "feature": "cc_total",
+      "n": 500,
+      "pearson": 0.16153226297485043,
+      "spearman": 0.14109484943783976
+    },
+    {
+      "feature": "cc_mean",
+      "n": 500,
+      "pearson": -0.014586584438335265,
+      "spearman": 0.06860857228263266
+    },
+    {
+      "feature": "cc_max",
+      "n": 500,
+      "pearson": 0.06116757410145007,
+      "spearman": 0.0878634162324441
+    },
+    {
+      "feature": "cog_total",
+      "n": 500,
+      "pearson": 0.1670492740590475,
+      "spearman": 0.18491741613967877
+    },
+    {
+      "feature": "cog_mean",
+      "n": 500,
+      "pearson": 0.017916764273998628,
+      "spearman": 0.10999888823075339
+    },
+    {
+      "feature": "cog_max",
+      "n": 500,
+      "pearson": 0.15048633769017974,
+      "spearman": 0.17929522203584605
+    },
+    {
+      "feature": "mi_total",
+      "n": 499,
+      "pearson": -0.034815051948461455,
+      "spearman": -0.037475638742579906
+    },
+    {
+      "feature": "mi_mean",
+      "n": 499,
+      "pearson": -0.016052533662301027,
+      "spearman": -0.04658011682370856
+    },
+    {
+      "feature": "mi_min",
+      "n": 499,
+      "pearson": -0.10063106547957588,
+      "spearman": -0.10437081404088727
+    },
+    {
+      "feature": "hv_total",
+      "n": 500,
+      "pearson": 0.13321919828488268,
+      "spearman": 0.14306226951204457
+    },
+    {
+      "feature": "hv_mean",
+      "n": 500,
+      "pearson": 0.02533359934035227,
+      "spearman": 0.07349822611391243
+    },
+    {
+      "feature": "loc_total",
+      "n": 500,
+      "pearson": 0.14959566240044136,
+      "spearman": 0.1558359468443643
+    },
+    {
+      "feature": "loc_mean",
+      "n": 500,
+      "pearson": 0.02355752851438847,
+      "spearman": 0.06531197669646395
+    }
+  ],
+  "arrow": [
+    {
+      "feature": "lines_changed",
+      "n": 55,
+      "pearson": 0.06864317849945034,
+      "spearman": 0.10117441912262447
+    },
+    {
+      "feature": "additions",
+      "n": 55,
+      "pearson": 0.15220780423931965,
+      "spearman": 0.14656178481341034
+    },
+    {
+      "feature": "deletions",
+      "n": 55,
+      "pearson": -0.05367217264007391,
+      "spearman": -0.12081462627309335
+    },
+    {
+      "feature": "files_changed",
+      "n": 55,
+      "pearson": -0.004780670160757715,
+      "spearman": 0.10864726117738933
+    },
+    {
+      "feature": "top_level_dirs",
+      "n": 55,
+      "pearson": -0.0031031034040851753,
+      "spearman": 0.06601148856604404
+    },
+    {
+      "feature": "second_level_dirs",
+      "n": 55,
+      "pearson": -0.11980414899571705,
+      "spearman": -0.13218075888278408
+    },
+    {
+      "feature": "cc_total",
+      "n": 55,
+      "pearson": 0.1757353869022231,
+      "spearman": 0.2061464852946267
+    },
+    {
+      "feature": "cc_mean",
+      "n": 55,
+      "pearson": 0.057749730896515084,
+      "spearman": 0.05849130034354573
+    },
+    {
+      "feature": "cc_max",
+      "n": 55,
+      "pearson": -0.10664919527552742,
+      "spearman": -0.02929493819345302
+    },
+    {
+      "feature": "cog_total",
+      "n": 55,
+      "pearson": 0.03405233096205898,
+      "spearman": 0.13038925684089225
+    },
+    {
+      "feature": "cog_mean",
+      "n": 55,
+      "pearson": 0.0405422964491952,
+      "spearman": 0.07753707433350661
+    },
+    {
+      "feature": "cog_max",
+      "n": 55,
+      "pearson": -0.10159097233298706,
+      "spearman": -0.025812833567563188
+    },
+    {
+      "feature": "mi_total",
+      "n": 48,
+      "pearson": 0.08814429830374781,
+      "spearman": 0.08590724919121454
+    },
+    {
+      "feature": "mi_mean",
+      "n": 48,
+      "pearson": 0.13763329039942607,
+      "spearman": 0.1572528699110833
+    },
+    {
+      "feature": "mi_min",
+      "n": 48,
+      "pearson": -0.19948109174267542,
+      "spearman": -0.22389298623409795
+    },
+    {
+      "feature": "hv_total",
+      "n": 55,
+      "pearson": -0.037895824286891956,
+      "spearman": 0.019462036411540855
+    },
+    {
+      "feature": "hv_mean",
+      "n": 49,
+      "pearson": -0.13169489270428822,
+      "spearman": -0.19765071823354294
+    },
+    {
+      "feature": "loc_total",
+      "n": 55,
+      "pearson": 0.23278728701767099,
+      "spearman": 0.21942705239975882
+    },
+    {
+      "feature": "loc_mean",
+      "n": 49,
+      "pearson": 0.19508302924583723,
+      "spearman": 0.14416224462968472
+    }
+  ]
+}

@@ -131,7 +131,8 @@
     "screened_prs": 701,
     "construction_inputs": 100,
     "extended_sensitivity_tasks": 59,
-    "selection_metric": "Added plus deleted lines in the complete PR diff",
+    "selection_metric": "Count lines in the complete PR diff beginning with + or -, except any line beginning with +++ or ---. This historical prefix rule excludes file headers and some changed content (for example documentation separators). The regression feature lines_changed instead counts changed content in retained non-test files.",
+    "regression_feature_scope": "All 19 adopted features exclude repository-root tests/ paths; original complete-PR features and results are preserved separately.",
     "selection_evidence": "selection/arrow-screening.json",
     "construction_evidence": "selection/arrow-construction.json"
   }

@@ -5,11 +5,11 @@ obtainable original datasets. See each subdirectory's README for field definitio
 
 | Retained material | Role |
 |---|---|
-| `features/` | Final 19-feature extraction for 500 Verified and 73 Arrow candidates |
+| `features/` | Source-only 19-feature inputs for 500 Verified and 73 Arrow candidates, with original complete-PR features preserved |
 | `outcomes/arrow/` | This study's ten solver-run summaries and oracle evaluation |
 | `targets/pro.json` | This study's 731 task-level aggregates from 13 public outcome reports |
 | `targets/pro-complete-traceable.json` | Nine-report aggregates for the same 381 tasks covered by all 13 reports |
-| `results/` | Final Arrow OOF predictions/folds, Pro Judge predictions and published aggregates |
+| `results/` | Source-only Arrow OOF predictions/folds, preserved complete-PR results, Pro Judge predictions and published aggregates |
 | `selection/` | Arrow screening counts, 100 construction outcomes, candidate IDs and saved PR labels |
 | `reference-inputs.json` | Task/repository/base identities, source-file and reference-patch hashes; no code text |
 | `sources.json` | Official source URLs, benchmark configurations, pinned Pro result commit and report hashes |
@@ -59,6 +59,19 @@ diff differs, it stops; it does not substitute PR head or a newer patch. An exis
 matching public-source cache can be supplied with `--base-cache` and `--arrow-patches`.
 The latter contains `pr-N.diff` files. For a download smoke test, select one task
 with `--task-id`. The full bundle is generated locally and excluded from Git.
+
+The extractor defaults to source-only scope for all 19 features; use
+`--file-scope complete-pr` to reproduce the preserved complete-PR features.
+To reuse saved per-file structural measurements instead of extracting them again:
+
+```bash
+uv run scripts/build_source_only_features.py \
+  --source-bundle work/reference-sources.jsonl.gz --output work/source-only-features-new
+```
+
+The builder verifies all 573 reference-patch hashes and complete-PR change
+statistics before filtering. It confirms that all 500 Verified feature vectors
+are unchanged, and writes the 73 Arrow vectors and per-file change counts.
 
 ## Obtain Pro outcome reports
 

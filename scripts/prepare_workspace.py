@@ -59,10 +59,14 @@ def prepare(destination, private_root=None):
     reg = destination/'experiments/regression'
     # Features and outcomes share inputs/arrow, but their source READMEs differ.
     # Keep those descriptions in the repository instead of colliding in work/.
-    merge(REPO/'data/features', reg/'inputs-reference', include_readmes=False)
-    merge(REPO/'data/features', reg/'inputs', include_readmes=False)
+    for dataset in ['verified', 'arrow']:
+        source = REPO/'data/features'/('source_only/arrow' if dataset == 'arrow' else 'verified')
+        merge(source, reg/'inputs-reference'/dataset, include_readmes=False)
+        merge(source, reg/'inputs'/dataset, include_readmes=False)
     merge(REPO/'data/outcomes/arrow', reg/'inputs/arrow', include_readmes=False)
-    merge(REPO/'data/results/regression', reg/'results/reference-features-2026-11-09')
+    for name in ['arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures', 'arrow_oracle_pass_grouped']:
+        merge(REPO/'data/results/regression'/name, reg/'results/reference-features-2026-11-09'/name)
+    merge(REPO/'data/results/regression/source_only', reg/'results/source-only')
     merge(REPO/'data/targets/pro.json', destination/'localdataset/data/pro-targets.json')
     merge(REPO/'data/targets/pro-complete-traceable.json',
           destination/'localdataset/data/pro-complete-traceable.json')

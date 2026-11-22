@@ -9,6 +9,18 @@ The root preparation command copies these files beside their inputs in `work/`.
 - `evaluate_verified_outcomes.py`: adopted Verified Boolean-only targets, preserving its saved outer/inner folds and the all-report sensitivity comparator.
 - `report.py`: audit saved predictions and produce final performance tables, without historical revision comparisons.
 
+All 19 adopted features exclude repository-root `tests/` paths. `file_scope.py`
+defines this scope for both structural aggregation and diff size/directory
+statistics. `extract_reference_features.py` defaults to it; pass
+`--file-scope complete-pr` to reproduce the preserved original scope.
+`build_source_only_features.py` can reuse saved per-file measurements and pinned
+diffs without repeating extraction. Original empty/missing conventions remain;
+unavailable files outside the selected scope do not make source metrics missing.
+
+From the repository root, `uv run scripts/run_source_only.py --output
+work/source-only-new` refits all four Arrow scenarios on their exact saved inner
+and outer splits. See [the adopted results](../../data/results/regression/source_only/README.md).
+
 The base-commit-grouped sensitivity is run from the repository root with:
 
 ```bash
@@ -24,13 +36,13 @@ task and target, and evaluates matched mean and median baselines. Group IDs,
 folds, OOF predictions, selected parameters, input/code hashes and versions are
 saved alongside the results. Original task-level results are not overwritten.
 The grouping and its scope are described in
-[the grouped-result guide](../../data/results/regression/arrow_oracle_pass_grouped/README.md).
+[the source-only guide](../../data/results/regression/source_only/README.md).
 
 To report saved results, after workspace preparation:
 
 ```bash
 uv run --project packages/regression --locked python packages/regression/report.py \
-  work/public/experiments/regression/results/reference-features-2026-11-09 \
+  work/public/experiments/regression/results/source-only \
   --output work/arrow-tables
 ```
 

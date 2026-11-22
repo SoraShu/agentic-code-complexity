@@ -1,0 +1,21 @@
+{
+  "definition": "All 19 features exclude repository-root tests/ paths. Non-test documentation/configuration changes remain in size/directory counts; structural metrics cover retained Python files.",
+  "source_bundle_sha256": "3b02b291775db4ff9f8812f622426991ff322a23bfc89f069de99040bc0bfab4",
+  "inputs": {
+    "data/reference-inputs.json": "a64523e245511ca94afafdb7384d17d447fb00c9bbeee06d8122d98124721a03",
+    "data/features/arrow/pr_metrics.jsonl": "5b2e7316e082f2b801b9e340d1fac0eb88372a8c4501536ea2e8e008168c3a0b",
+    "data/features/verified/task_metrics.jsonl": "f241737b0b9fb93b1f197bd26c920db2aa1051f3f8ce4c3436840e946f5e8270"
+  },
+  "code": {
+    "scripts/build_source_only_features.py": "162afa11bf3e646cb1d121c815f4d69156e90ef092a7fafca46a488e25901f52",
+    "packages/regression/file_scope.py": "0ab1584c911f10b45eba22bea922646f70084a748e36c5469a7ad3ce97d0f11d",
+    "packages/regression/extract_reference_features.py": "926d4793ee98574f455d402b2e7abd5ba31aad17d9ab1cb0ddbafaeb6a970c81"
+  },
+  "arrow_tasks": 73,
+  "verified_unchanged_tasks": 500,
+  "verified_features": "data/features/verified/task_metrics.jsonl",
+  "files": {
+    "arrow/change-counts.json": "020dc106f03bacb72cc5905fe949e9bace9a247e03ba350cc73106d21a813009",
+    "arrow/pr_metrics.jsonl": "a03d8d4bdf2cb3d4c1eefccf918e69e6d7fe121f4d44c05da68391da4e96231d"
+  }
+}

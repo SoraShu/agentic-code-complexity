@@ -1,5 +1,9 @@
 # Arrow base-commit-grouped sensitivity
 
+These are the preserved complete-PR results, including PR tests. The adopted
+[source-only grouped sensitivity](../source_only/arrow_oracle_pass_grouped/README.md)
+uses identical task groups, targets and nested splits.
+
 These results retain all 55 oracle-pass tasks, 548 valid outcomes, 19 features and
 targets from `../arrow_oracle_pass/dataset.json`. No solver or Judge was rerun.
 Only Lasso and XGBoost are refitted, using the same complete search grids and
@@ -55,7 +59,7 @@ statistics. `metadata.json` records versions, grids, seeds, timestamps and hashe
 From the repository root:
 
 ```bash
-uv run scripts/run_arrow_grouped.py --output work/arrow-grouped-new --workers 8
+uv run scripts/run_arrow_grouped.py --feature-scope complete-pr --output work/arrow-grouped-original-new --workers 8
 ```
 
 The output path must be new and under ignored `work/`. To verify the published

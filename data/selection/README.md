@@ -9,16 +9,17 @@ file headers but also some changed content, such as documentation separators.
 The selected boundary is 135 by this historical count; the next PR has 133.
 It is not patch byte size or a sum over individual commit patches.
 
-The screening measure is distinct from the regression feature `lines_changed`,
-which includes these content lines. Hash-matched reference diffs give the
-following comparisons (independently checked with `git apply --numstat`):
+The screening measure differs from ordinary changed-line counts because of
+those excluded content lines. The adopted regression feature `lines_changed`
+also excludes `tests/` paths. Hash-matched reference diffs give the following
+comparisons (complete-diff counts checked with `git apply --numstat`):
 
-| PR | Historical screening count | Changed lines / regression feature |
-|---|---:|---:|
-| 608 | 433 | 444 |
-| 647 | 159 | 161 |
-| 791 | 140 | 141 |
-| 1135 | 1208 | 1213 |
+| PR | Historical screening count | Complete-PR changed lines | Source-only `lines_changed` |
+|---|---:|---:|---:|
+| 608 | 433 | 444 | 444 |
+| 647 | 159 | 161 | 161 |
+| 791 | 140 | 141 | 56 |
+| 1135 | 1208 | 1213 | 1213 |
 
 `arrow-screening.json` contains the 701 derived line counts and the original
 metric-snapshot SHA-256. Applying the historical prefix rule to the retained

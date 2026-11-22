@@ -1,6 +1,10 @@
 # arrow
 
-Extended sensitivity analysis; 59 tasks. The main analysis is the 55-task
+Preserved complete-PR features/results, including PR tests. The adopted
+[source-only sensitivity](../source_only/arrow/README.md) retains these tasks,
+targets and splits.
+
+Extended sensitivity cohort; 59 tasks. The main cohort is the 55-task
 `../arrow_oracle_pass/` cohort. This extension additionally includes four
 oracle-fail tasks with recorded agent success.
 

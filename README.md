@@ -28,11 +28,21 @@ trained or called. Public original datasets are obtained separately as described
 `uv run scripts/verify_arrow_selection.py` checks Arrow's 701-PR screening
 snapshot, 100 construction inputs, 73 constructed tasks and 55 oracle passes.
 
+All 19 features use source-only scope: repository-root `tests/` paths are
+excluded from both change statistics and structural aggregates. Verified's
+feature vectors are unchanged; Arrow uses the
+[source-only results](data/results/regression/source_only/README.md).
+Original complete-PR inputs and fitted results remain available separately.
+
+`uv run scripts/run_source_only.py --output work/source-only-new` refits Arrow's
+main and three retained sensitivity scenarios with the original inner and outer
+splits and full search grids. It does not call a solving agent or Judge.
+
 To refit only Arrow's grouped sensitivity with the complete original search
 grids, run `uv run scripts/run_arrow_grouped.py --output work/arrow-grouped-new`.
 It reads the saved features and targets, holds each base-commit group together
 in both nested CV levels, and writes a new result directory. It does not call a
-solving agent or Judge. See [the grouped results](data/results/regression/arrow_oracle_pass_grouped/README.md).
+solving agent or Judge. See [the source-only results](data/results/regression/source_only/README.md).
 
 Verified's historical Microsoft outcome reports and task-level results are private.
 With an authorized local copy, additionally run:

@@ -1,0 +1,79 @@
+{
+  "definition": "Repository and benchmark base commit; no outcomes or features used for grouping",
+  "task_groups": {
+    "pr-102": "arrow-py/arrow@b7eb832c08a1e376ffbacb70e95366b03a844379",
+    "pr-166": "arrow-py/arrow@859a449030c9a7352e56753222b193036373f970",
+    "pr-231": "arrow-py/arrow@cb9acae33fbb49debb489014cda034fa9f6c437f",
+    "pr-276": "arrow-py/arrow@fa89745f00d3fbb33e62492ebbedc8c0837d6d14",
+    "pr-327": "arrow-py/arrow@90007c1688d26951d080f11e51dd115ac032ef41",
+    "pr-349": "arrow-py/arrow@319f2d0651b2832445022fa2d4fa1a57a319b725",
+    "pr-383": "arrow-py/arrow@4996bc9422a89ddeaa45d05f25c750d893db4667",
+    "pr-385": "arrow-py/arrow@4996bc9422a89ddeaa45d05f25c750d893db4667",
+    "pr-387": "arrow-py/arrow@4996bc9422a89ddeaa45d05f25c750d893db4667",
+    "pr-418": "arrow-py/arrow@fd723b46a6d84ea75af329fe78da6afaf27dfeba",
+    "pr-562": "arrow-py/arrow@f6759989a51f2236165f0a9a42f96151ad9629db",
+    "pr-583": "arrow-py/arrow@88de0faf97aebe3f8ec2ecaf30c7d1064d4001f6",
+    "pr-591": "arrow-py/arrow@2e5031b473bcf10b99b9d7ff8a7e72499c412c07",
+    "pr-602": "arrow-py/arrow@26a8af8d47eb2cec32033283769f67310cd5b85b",
+    "pr-609": "arrow-py/arrow@6ab1c0ba646af93091232e67cc3fa1d3a6a93107",
+    "pr-640": "arrow-py/arrow@11f5751e6dd6b1854829ab325ff208d79c9bee2d",
+    "pr-655": "arrow-py/arrow@877debfc965f1258ad3da51823cf5b77a20bbcae",
+    "pr-679": "arrow-py/arrow@5b2c8c3daf9b31206c69367d43d8d6e3be4bc3ad",
+    "pr-731": "arrow-py/arrow@2b3dfe42b416e8c62c6e89877ccc3b558db365c3",
+    "pr-744": "arrow-py/arrow@70fb9053af26aeff455f889e11ba5db272f64633",
+    "pr-745": "arrow-py/arrow@70fb9053af26aeff455f889e11ba5db272f64633",
+    "pr-748": "arrow-py/arrow@b12f4a6d23ef8691f1485651358270374920fdc7",
+    "pr-758": "arrow-py/arrow@838f129712195b1ad05a7f4c68addb5ce701ded6",
+    "pr-761": "arrow-py/arrow@cbcf6d0baa98f82ff6de46817fb147865c53fcd6",
+    "pr-770": "arrow-py/arrow@34213790ebbafb743ddcc8fb15d051bc9bd44249",
+    "pr-772": "arrow-py/arrow@d6753353002704cdf86e65e59c7c835340723a82",
+    "pr-775": "arrow-py/arrow@d03dee5c85244993c1a0a36a6915e4574ebb9924",
+    "pr-791": "arrow-py/arrow@6fd78a13e21c4eee0f4b33699496576f6a111772",
+    "pr-802": "arrow-py/arrow@90b33b06fc1ff8ad65d824dcaf0183863c8decf7",
+    "pr-817": "arrow-py/arrow@b7a74034dbe08bda552a1eb08fd9bf25c65986de",
+    "pr-841": "arrow-py/arrow@fb83f688f379719cb17770060009742c2c989e47",
+    "pr-849": "arrow-py/arrow@ba103db29e3635ca15f5274e5901af44a4cb688d",
+    "pr-887": "arrow-py/arrow@f885241eb7e954a79d95a59b085fbe310c537c1c",
+    "pr-888": "arrow-py/arrow@0aebf5729341c28926cca5ab0e2fec9737163ba6",
+    "pr-910": "arrow-py/arrow@86f2cf319274283802dadc2bad6e367de6cab275",
+    "pr-954": "arrow-py/arrow@ac6a204e2a2c969103ad2415b641b4d1cc4092bb",
+    "pr-956": "arrow-py/arrow@f18be7fdf03060dc17884cfd5ed9d789d51092e6",
+    "pr-970": "arrow-py/arrow@06fe693c193add28c541781e28edee132cb33d77",
+    "pr-1004": "arrow-py/arrow@37b45daccb956d1955d1b169a98df93f7e6da97c",
+    "pr-1010": "arrow-py/arrow@0a01d345cbdc2ef8391c8b02f4ac1d3009e73434",
+    "pr-1043": "arrow-py/arrow@9b457195918a3b69960a88ff3be321b8d5a7c262",
+    "pr-1044": "arrow-py/arrow@9b457195918a3b69960a88ff3be321b8d5a7c262",
+    "pr-1069": "arrow-py/arrow@56e58ee568e083f3cf7e161aa846e710aacf1776",
+    "pr-1076": "arrow-py/arrow@fecbada0e4cc06b52f08a9e1151045b9e056ab3d",
+    "pr-1088": "arrow-py/arrow@cdc8d337835ab4132e0a3f3de1f73581eaa42e81",
+    "pr-1092": "arrow-py/arrow@5ad47f1cf58fe4b2f053e37be04362096441716b",
+    "pr-1093": "arrow-py/arrow@5ad47f1cf58fe4b2f053e37be04362096441716b",
+    "pr-1096": "arrow-py/arrow@7b5c1aa73e97c98ea7a10ba5a4743fc9d3e41a2e",
+    "pr-1098": "arrow-py/arrow@f98ad731779c38e01920d74fef9c4b4d24342f89",
+    "pr-1105": "arrow-py/arrow@1904804a8d19581397afb2a2b10304e741bcb921",
+    "pr-1164": "arrow-py/arrow@522a65b16742a76b21154efaff3c3768e95a9bcc",
+    "pr-1200": "arrow-py/arrow@016fb9eb9b3835bcd4efc69dc048a0436bd7bfec",
+    "pr-1217": "arrow-py/arrow@0fe5f065718e5af3ab47903d1bec82d87d202a63",
+    "pr-1222": "arrow-py/arrow@7ccbe66122ca53d90acf9c69c37aa95c81a1fe89",
+    "pr-1236": "arrow-py/arrow@edfff3c095999cdb40d14f9f218cb8d12a621b87"
+  },
+  "multi_task_groups": {
+    "arrow-py/arrow@4996bc9422a89ddeaa45d05f25c750d893db4667": [
+      "pr-383",
+      "pr-385",
+      "pr-387"
+    ],
+    "arrow-py/arrow@70fb9053af26aeff455f889e11ba5db272f64633": [
+      "pr-744",
+      "pr-745"
+    ],
+    "arrow-py/arrow@9b457195918a3b69960a88ff3be321b8d5a7c262": [
+      "pr-1043",
+      "pr-1044"
+    ],
+    "arrow-py/arrow@5ad47f1cf58fe4b2f053e37be04362096441716b": [
+      "pr-1092",
+      "pr-1093"
+    ]
+  }
+}

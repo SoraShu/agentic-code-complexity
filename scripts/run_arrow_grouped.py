@@ -32,11 +32,15 @@ def main():
                         help='New directory under work/; existing results are never overwritten')
     parser.add_argument('--workers', type=int, default=8)
     parser.add_argument('--seed', type=int, default=42)
+    parser.add_argument('--feature-scope', choices=['source-only', 'complete-pr'], default='source-only')
     args = parser.parse_args()
     output = args.output.resolve()
     if not output.is_relative_to(REPO / 'work') or args.workers < 1:
         parser.error('Use a new output directory under work/ and a positive worker count')
-    source = REPO / 'data/results/regression/arrow_oracle_pass/dataset.json'
+    result_root = REPO / 'data/results/regression'
+    if args.feature_scope == 'source-only':
+        result_root = result_root / 'source_only'
+    source = result_root / 'arrow_oracle_pass/dataset.json'
     reference = REPO / 'data/reference-inputs.json'
     dataset = json.loads(source.read_text(encoding='utf-8'))
     ids = {r['task_id'] for r in dataset['rows']}
@@ -54,6 +58,7 @@ def main():
         'python': sys.version, 'platform': platform.platform(),
         'entry_point': str(Path(__file__).relative_to(REPO)),
         'workers': args.workers, 'seed': args.seed,
+        'feature_scope': args.feature_scope,
         'versions': {name: importlib.metadata.version(name) for name in
                      ['numpy', 'scipy', 'scikit-learn', 'xgboost', 'joblib', 'threadpoolctl']},
         'input_sha256': {str(p.relative_to(REPO)): ev.digest(p) for p in [source, reference]},

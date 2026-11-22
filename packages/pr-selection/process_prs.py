@@ -106,7 +106,7 @@ def parse_patch(patch_text: str):
     """Historical screening count; also excludes content starting +++ or ---.
 
     Preserve this rule to reproduce the saved 100-PR cohort. It is distinct
-    from the regression feature that includes all added/deleted content lines.
+    from the regression feature that counts changed content in retained non-test files.
     """
     files_changed = 0
     lines_added = 0

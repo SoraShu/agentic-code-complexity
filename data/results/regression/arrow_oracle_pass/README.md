@@ -1,6 +1,10 @@
 # arrow_oracle_pass
 
-Main Arrow analysis; 55 tasks selected by passing reference execution,
+Preserved complete-PR features/results, including PR tests. The adopted
+[source-only analysis](../source_only/arrow_oracle_pass/README.md) uses the same
+tasks, targets and splits.
+
+Main Arrow cohort; 55 tasks selected by passing reference execution,
 independently of solving-agent outcomes. The 59-task `../arrow/` cohort is an
 extended sensitivity analysis.
 

@@ -1,0 +1,2534 @@
+[
+  {
+    "task_id": "pr-102",
+    "reference_patch_sha256": "3b1b5ce4f9cd57ae020811ed66fdaadbc0ba865815e5c809c2432797598586ce",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 77,
+        "deletions": 0
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 58,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-166",
+    "reference_patch_sha256": "9ea7e1fb3c95c51314ecfadf1bfc2f918a14ed5a304e8058d154013c52d372f7",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/__init__.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 74,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 24,
+        "deletions": 3
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 7
+      },
+      {
+        "path": "tests/api_tests.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 99,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-231",
+    "reference_patch_sha256": "88a92a8224cc9e731a0f7ffac69a14680036e4cc42bd044bf145281619c2af7c",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 42,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 6
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "tests/formatter_tests.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 62,
+        "deletions": 0
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 81,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-276",
+    "reference_patch_sha256": "b8ac6d35562b5d91c47ceffedabcaf637e6b116e41e706b732936d3b6485ca72",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 44,
+        "deletions": 9
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 69,
+        "deletions": 40
+      }
+    ]
+  },
+  {
+    "task_id": "pr-284",
+    "reference_patch_sha256": "8fd649db75a3ca5a1b9c0b664b3a04d6fd488725e7abe7ea37b97b8fa1d3ff92",
+    "complete_pr_change_files": [
+      {
+        "path": ".coveragerc",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": ".travis.yml",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 15,
+        "deletions": 43
+      },
+      {
+        "path": "setup.cfg",
+        "status": "added",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 3
+      },
+      {
+        "path": "tests/factory_tests.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "path": "tests/formatter_tests.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 0
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 96,
+        "deletions": 1
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 13,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-327",
+    "reference_patch_sha256": "e079c6f8e274956f6438bccc486e5dfe77d695324f309e617e1d781cc0dacd9d",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 90,
+        "deletions": 96
+      },
+      {
+        "path": "tests/formatter_tests.py",
+        "status": "modified",
+        "additions": 57,
+        "deletions": 53
+      }
+    ]
+  },
+  {
+    "task_id": "pr-342",
+    "reference_patch_sha256": "5f897ab30cb9d5272a5740637191300fd00350b4cc3a22186b39f085926b92d3",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 6
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 101,
+        "deletions": 82
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 16,
+        "deletions": 18
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 16,
+        "deletions": 9
+      }
+    ]
+  },
+  {
+    "task_id": "pr-349",
+    "reference_patch_sha256": "1e4afed342088e523b3d739719f724e885bfde1bc62d590ddbfa346f7a399dec",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 50,
+        "deletions": 15
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 117,
+        "deletions": 17
+      }
+    ]
+  },
+  {
+    "task_id": "pr-372",
+    "reference_patch_sha256": "6333d039020354394941ea9dd1b62eb94a1990da0fbcc44b5adec83a491b3e12",
+    "complete_pr_change_files": [
+      {
+        "path": ".coveragerc",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 23,
+        "deletions": 26
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 8
+      },
+      {
+        "path": "setup.cfg",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "tests/factory_tests.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 1
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 72,
+        "deletions": 12
+      },
+      {
+        "path": "tests/util_tests.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-383",
+    "reference_patch_sha256": "a8de302e189bf8c416c858b4006fdda0624c89a05e6cc117f9aebbe7a034a6fe",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 81,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 123,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-385",
+    "reference_patch_sha256": "0195e5c31e368fee3941517f980fbf4eab9c6b6b1ef3f59f8175faadb6143360",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 124,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 102,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-387",
+    "reference_patch_sha256": "7687f276111b29b963e87c9fccd4a7d8a9375aa7f7feeab49092d56f88b96812",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 119,
+        "deletions": 6
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 206,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-388",
+    "reference_patch_sha256": "48e5e8a5d9385dab27fc837ffd94da704ce04eebfa3f95cb6dda5ed67873ce93",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 67,
+        "deletions": 43
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 54,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-414",
+    "reference_patch_sha256": "a2eb961f5014765e59c213a5219f0194175fe167a5a6cc83b5fc4db932f92401",
+    "complete_pr_change_files": [
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/parser.pyx",
+        "status": "modified",
+        "additions": 31,
+        "deletions": 22
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 39,
+        "deletions": 1
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 90,
+        "deletions": 49
+      }
+    ]
+  },
+  {
+    "task_id": "pr-418",
+    "reference_patch_sha256": "4768bd4baec7729a795a24d3b3176b2b8fdd9468bc34a7ccd73bd9f7031cf7b0",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 65,
+        "deletions": 2
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 100,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-458",
+    "reference_patch_sha256": "d182fdda9bd967274190462e3dba86bf1210a2ed01b1641db425b1ad1723bab1",
+    "complete_pr_change_files": [
+      {
+        "path": ".gitignore",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 37,
+        "deletions": 33
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 64,
+        "deletions": 1
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 107,
+        "deletions": 46
+      }
+    ]
+  },
+  {
+    "task_id": "pr-562",
+    "reference_patch_sha256": "a502da204d5b502bd3bd4e3f9c08a3eba1f56d23fc6fbaeae00c435259befeaa",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 186,
+        "deletions": 20
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 3
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-579",
+    "reference_patch_sha256": "58d21f7600fa6159da289b432b902a4600544826a6df0b1238b250ef8a4d2301",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 98,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 59,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-583",
+    "reference_patch_sha256": "075071a733f9d98851a9030f3d9c0f888dbec30cc2cd214d0b37266d114f8bfb",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 138,
+        "deletions": 17
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 124,
+        "deletions": 27
+      }
+    ]
+  },
+  {
+    "task_id": "pr-591",
+    "reference_patch_sha256": "cafe9a20d8cc97aabd427912e0d8285493b793355bf3ebf0dc528dd5d49c2297",
+    "complete_pr_change_files": [
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "docs/Makefile",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 167
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 29,
+        "deletions": 221
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 5
+      },
+      {
+        "path": "setup.cfg",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 3
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 2
+      }
+    ]
+  },
+  {
+    "task_id": "pr-602",
+    "reference_patch_sha256": "1f1603f92f16167ebf0002e6949659d409a1cbea84c45b289ca976ffd8dd71cb",
+    "complete_pr_change_files": [
+      {
+        "path": ".gitignore",
+        "status": "modified",
+        "additions": 199,
+        "deletions": 17
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 8,
+        "deletions": 8
+      }
+    ]
+  },
+  {
+    "task_id": "pr-608",
+    "reference_patch_sha256": "54a465bdee0ddc9debe70b001ba16acf676203453e2f02552f7a2701943c1ef5",
+    "complete_pr_change_files": [
+      {
+        "path": ".gitignore",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": ".pre-commit-config.yaml",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 4
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 19,
+        "deletions": 15
+      },
+      {
+        "path": "arrow/__init__.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/_version.py",
+        "status": "added",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": "docs/Makefile",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 3
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 24,
+        "deletions": 202
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 30,
+        "deletions": 104
+      },
+      {
+        "path": "docs/make.bat",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 10
+      },
+      {
+        "path": "tox.ini",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 4
+      }
+    ]
+  },
+  {
+    "task_id": "pr-609",
+    "reference_patch_sha256": "dbfefbbe408039bb4e7a676c8ed5b05329b16d127521998a800c67af55b30ae3",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 90,
+        "deletions": 143
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 87,
+        "deletions": 34
+      }
+    ]
+  },
+  {
+    "task_id": "pr-640",
+    "reference_patch_sha256": "096b61a718cce9f4ab4decfea920a249612b540d29dd85af95ffb0d778d839c8",
+    "complete_pr_change_files": [
+      {
+        "path": ".pre-commit-config.yaml",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 5
+      },
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "README.rst.new",
+        "status": "added",
+        "additions": 0,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 22,
+        "deletions": 10
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 6
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 6
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 61,
+        "deletions": 2
+      },
+      {
+        "path": "tests/factory_tests.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-646",
+    "reference_patch_sha256": "74cd055f5b9370b9ebb22a26c4b5a799b0e171b226f65d85d77301490130faea",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 86,
+        "deletions": 74
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 4
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 7
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": "setup.cfg",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "path": "tests/factory_tests.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-647",
+    "reference_patch_sha256": "88d4aed01e6b15cfb1ad954bad3e0fb7039a19c1cad0d1c232eab3d564b31745",
+    "complete_pr_change_files": [
+      {
+        "path": ".travis.yml",
+        "status": "modified",
+        "additions": 14,
+        "deletions": 8
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 4
+      },
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 24,
+        "deletions": 19
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "docs/make.bat",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 35
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "tox.ini",
+        "status": "modified",
+        "additions": 14,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-655",
+    "reference_patch_sha256": "f9024f3eea432e9556067af78aed9d2a47a83a9f9f99c99c00f32099c8140a64",
+    "complete_pr_change_files": [
+      {
+        "path": ".pre-commit-config.yaml",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 31
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 207,
+        "deletions": 99
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 64
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 13
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 66
+      },
+      {
+        "path": "tests/factory_tests.py",
+        "status": "modified",
+        "additions": 19,
+        "deletions": 11
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 582,
+        "deletions": 52
+      },
+      {
+        "path": "tests/util_tests.py",
+        "status": "added",
+        "additions": 31,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-673",
+    "reference_patch_sha256": "7efd756e19027883ae065de3e4521f077dc1e980afda851a7c7fee67d6495f32",
+    "complete_pr_change_files": [
+      {
+        "path": "CHANGELOG.rst",
+        "status": "modified",
+        "additions": 120,
+        "deletions": 75
+      },
+      {
+        "path": "MANIFEST.in",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 1
+      },
+      {
+        "path": "docs/releases.rst",
+        "status": "added",
+        "additions": 3,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-679",
+    "reference_patch_sha256": "5c4b1b6017c0cb931bf7c8141dc3cd2f9819fecedf7d19fcf1b090087ffd3c45",
+    "complete_pr_change_files": [
+      {
+        "path": ".gitignore",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "LICENSE",
+        "status": "modified",
+        "additions": 189,
+        "deletions": 1
+      },
+      {
+        "path": "MANIFEST",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-700",
+    "reference_patch_sha256": "c6b20ba35f766b46548b91b7141c956d995ceb80098f885c8c76e15a36afec77",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 52,
+        "deletions": 1
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 13,
+        "deletions": 18
+      },
+      {
+        "path": "tests/util_tests.py",
+        "status": "modified",
+        "additions": 63,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-722",
+    "reference_patch_sha256": "79ac7d582719262425bf1475d3a25fb99b058ea41fc5268c7c478f26f77fdd80",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 65,
+        "deletions": 8
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 36,
+        "deletions": 0
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 27,
+        "deletions": 0
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 67,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-724",
+    "reference_patch_sha256": "62f0b31482724cb24e95ee1a9f2184dcc21ccfeb1a04b3e8723419799ecee480",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 43,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 31,
+        "deletions": 0
+      },
+      {
+        "path": "tests/dehumanize_my_test.py",
+        "status": "added",
+        "additions": 96,
+        "deletions": 0
+      },
+      {
+        "path": "to do ZhangQingsen.txt",
+        "status": "added",
+        "additions": 1,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-731",
+    "reference_patch_sha256": "032482ce5f5b6475e22fb50a1317beb33b596835c064b0f301da85f1f9d82fa0",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 48,
+        "deletions": 17
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 90,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-744",
+    "reference_patch_sha256": "8749c715ecfcc6511699c043a0476688678361aebaf4c3b5869b9f407ab8525d",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 17
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 60,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 52
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 24,
+        "deletions": 0
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 18,
+        "deletions": 13
+      },
+      {
+        "path": "tests/util_tests.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 63
+      }
+    ]
+  },
+  {
+    "task_id": "pr-745",
+    "reference_patch_sha256": "076a988899c9176ca876a5d9eaf37cb9e7570dd917694735c5d0f171008132f1",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 52
+      },
+      {
+        "path": "tests/parser_tests.py",
+        "status": "modified",
+        "additions": 18,
+        "deletions": 13
+      },
+      {
+        "path": "tests/util_tests.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 63
+      }
+    ]
+  },
+  {
+    "task_id": "pr-748",
+    "reference_patch_sha256": "fecf879110026be29289f7d41a4d01df49f1a5ac183d6413390ce0a2b50befe9",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 16,
+        "deletions": 7
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 95,
+        "deletions": 46
+      },
+      {
+        "path": "tests/arrow_tests.py",
+        "status": "modified",
+        "additions": 39,
+        "deletions": 9
+      },
+      {
+        "path": "tests/locales_tests.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 7
+      }
+    ]
+  },
+  {
+    "task_id": "pr-758",
+    "reference_patch_sha256": "daef134593d7064386a8e7831ef42c8c98eaeba3a000077463f92a4784b345d1",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 73,
+        "deletions": 7
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 122,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-761",
+    "reference_patch_sha256": "719250242e551c0bba51f284ef1ad3304472640e3ac91a8bfaf5db5b478f4039",
+    "complete_pr_change_files": [
+      {
+        "path": ".github/WORKFLOWS/continuous_integration.yml",
+        "status": "added",
+        "additions": 105,
+        "deletions": 0
+      },
+      {
+        "path": ".travis.yml",
+        "status": "removed",
+        "additions": 0,
+        "deletions": 43
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "setup.cfg",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-770",
+    "reference_patch_sha256": "0aa19f31af719a3e83c4a4e86ed4edb2c977f7e7a76a617a3a93ded9d0e88fb5",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 28,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_formatter.py",
+        "status": "modified",
+        "additions": 103,
+        "deletions": 6
+      }
+    ]
+  },
+  {
+    "task_id": "pr-772",
+    "reference_patch_sha256": "1e796cd0d10e9d75a460d480b220dd89733ed21fb46176899bc9636294205cd7",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 77,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 59,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-775",
+    "reference_patch_sha256": "77bf001000b73919a93b69310f184ea85050eafd7390fcc5ef962e92caf84501",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 62,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 77,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-791",
+    "reference_patch_sha256": "c6e4370220e35bd02a772982b891415ef39a0dca692daf5ec805f2f0d520a5d6",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/__init__.py",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 29,
+        "deletions": 0
+      },
+      {
+        "path": "tests/conftest.py",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_formatter.py",
+        "status": "modified",
+        "additions": 76,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-798",
+    "reference_patch_sha256": "9a69f2f9ebb94442754315bd8e36550c5d1c2b5f9e2a30f9beba04440f70bf3f",
+    "complete_pr_change_files": [
+      {
+        "path": ".pre-commit-config.yaml",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "path": ".travis.yml",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 9
+      },
+      {
+        "path": "arrow/__init__.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 18
+      },
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 13
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 26,
+        "deletions": 29
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 13,
+        "deletions": 18
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 3
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 2
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 10
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 10
+      },
+      {
+        "path": "tests/test_api.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 6
+      },
+      {
+        "path": "tests/test_factory.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 2
+      },
+      {
+        "path": "tests/test_formatter.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 3
+      },
+      {
+        "path": "tests/test_parser.py",
+        "status": "modified",
+        "additions": 16,
+        "deletions": 32
+      },
+      {
+        "path": "tests/test_util.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "tests/utils.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 1
+      },
+      {
+        "path": "tox.ini",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      }
+    ]
+  },
+  {
+    "task_id": "pr-799",
+    "reference_patch_sha256": "9065d7c6bf398aa931ba72dad386d06f884d2a614044c198c92505c6a2ef7c1c",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 29,
+        "deletions": 27
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 125,
+        "deletions": 10
+      }
+    ]
+  },
+  {
+    "task_id": "pr-802",
+    "reference_patch_sha256": "c2158916a9ba9abc80e4e2272b4d46642e116cb2f4ea09b5faef394394b51992",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 47,
+        "deletions": 5
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 0
+      },
+      {
+        "path": "setup.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 113,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-817",
+    "reference_patch_sha256": "4f690eeae6e6a5f20c1445fac06729f1c7dd5789e66d5541eaaa809c8e21f679",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 48,
+        "deletions": 17
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 91,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-841",
+    "reference_patch_sha256": "64de82a25ae9acdf099c84192eae16e516fae5d3ca860fa543dac495a0ffd3c7",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 188,
+        "deletions": 195
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 7
+      }
+    ]
+  },
+  {
+    "task_id": "pr-849",
+    "reference_patch_sha256": "7bcfac43834b216ed056276589ed74d7657e11ad638d84b2012d6125e2acb5a4",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 171,
+        "deletions": 11
+      }
+    ]
+  },
+  {
+    "task_id": "pr-887",
+    "reference_patch_sha256": "bb0d4b7cd37625e63f680692d5cc35742bfa39f312079b9758ce7caad336eb28",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 43
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 12
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 14
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 7
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 9
+      },
+      {
+        "path": "tests/test_util.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 4
+      },
+      {
+        "path": "tests/utils.py",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 3
+      }
+    ]
+  },
+  {
+    "task_id": "pr-888",
+    "reference_patch_sha256": "375eb9ae5874be033203b3790177c99adf42ccc15a17ddec29835c8aec237efe",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 51,
+        "deletions": 18
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 206,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-910",
+    "reference_patch_sha256": "6f65fe820572e9aea453296a00901981ef9b06071008ed30bc1b92f0bc8e0bd0",
+    "complete_pr_change_files": [
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 8,
+        "deletions": 8
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/util.py",
+        "status": "modified",
+        "additions": 8,
+        "deletions": 4
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 3
+      },
+      {
+        "path": "requirements.txt",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 1
+      },
+      {
+        "path": "tests/conftest.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 2
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 51,
+        "deletions": 46
+      },
+      {
+        "path": "tests/test_factory.py",
+        "status": "modified",
+        "additions": 24,
+        "deletions": 19
+      },
+      {
+        "path": "tests/test_formatter.py",
+        "status": "modified",
+        "additions": 8,
+        "deletions": 9
+      },
+      {
+        "path": "tests/test_parser.py",
+        "status": "modified",
+        "additions": 37,
+        "deletions": 33
+      },
+      {
+        "path": "tests/utils.py",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 10
+      }
+    ]
+  },
+  {
+    "task_id": "pr-954",
+    "reference_patch_sha256": "a91d5c0c16ad4036e05ab1f05677d2113c1cf5b45ec16b4c3d8035a863e8b43a",
+    "complete_pr_change_files": [
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 5
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 3
+      },
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 6
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 83,
+        "deletions": 88
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 36,
+        "deletions": 4
+      },
+      {
+        "path": "tests/test_parser.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 11
+      }
+    ]
+  },
+  {
+    "task_id": "pr-956",
+    "reference_patch_sha256": "31111d915c4fdf77a9f40381d553da5c0e18f8148f7c04a279927c757e5e1d3c",
+    "complete_pr_change_files": [
+      {
+        "path": "README.rst",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "arrow/api.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 5
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 149,
+        "deletions": 4
+      },
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 89,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 7,
+        "deletions": 6
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 167,
+        "deletions": 91
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 1
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 518,
+        "deletions": 2
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 59,
+        "deletions": 5
+      },
+      {
+        "path": "tests/test_parser.py",
+        "status": "modified",
+        "additions": 11,
+        "deletions": 11
+      }
+    ]
+  },
+  {
+    "task_id": "pr-970",
+    "reference_patch_sha256": "87cf9171af866279c72a687d64fc1b40987a1a25f67f7f9244af865394d1bc5a",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 45,
+        "deletions": 32
+      },
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 26,
+        "deletions": 36
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 124,
+        "deletions": 89
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 9
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1004",
+    "reference_patch_sha256": "bb4b05cbb39fc28ee14260fffcd97a46786ed5f03baee43c714914fbe15c3575",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 88,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 44,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1010",
+    "reference_patch_sha256": "de269f6a4f02414c421a7aba4a82ad91a2a7764d6c91bbc866c70550bb4c274d",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 169,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1043",
+    "reference_patch_sha256": "d2efe08d9b8429a7be401408af2ad4bbfab8c00ebcc3cf0c4acd11c9e18b459d",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 164,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 74,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1044",
+    "reference_patch_sha256": "39d45eb825d6df3be005b4e22421e4229a6977cd5f8daed8f9249bb9f18dbf83",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 164,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 74,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1069",
+    "reference_patch_sha256": "c4df40695bc720917da46926382af8601a1603770f74a48d9ae974e65ed58bd7",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 68,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 65,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1073",
+    "reference_patch_sha256": "cfec9a0c58cea7737a7eef2f4c63a0b10e59f2f0110820f0af966d5676de6a59",
+    "complete_pr_change_files": [
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 239,
+        "deletions": 13
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1076",
+    "reference_patch_sha256": "5580df040deddf31ca0db898025da0dff433fa74a3fbe46e7e169771de1d670f",
+    "complete_pr_change_files": [
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 150,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1088",
+    "reference_patch_sha256": "ccb6f5a4a4bcc159d2058c719be6c8429cce47b75cc7c1a4e16dccd3b6ff64d5",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 85,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 53,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1092",
+    "reference_patch_sha256": "1bee5035ab82ef67baca453763118b97422b88215d60e5bc8583e6ecbc5bead4",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 171,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 73,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1093",
+    "reference_patch_sha256": "45883d94689ab1bc18c95864daaa0dcbd2d8ec27be315527274b0c9c3ea0db07",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 171,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 76,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1096",
+    "reference_patch_sha256": "8ae303c48bb93f23f21f0a384f61ba982d740bbff7dfbae0aa002e310c0e038f",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 87,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 59,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1098",
+    "reference_patch_sha256": "d2af291bca3f71813163660db810f1c058aa671aa6672cb0d710f832c35fe4bf",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 67,
+        "deletions": 60
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 79,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1105",
+    "reference_patch_sha256": "97ead066396a2a8beca6f21607a1c9e765fe3c5ba89a8f436cdeec3c6d6e505b",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/constants.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 108,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 57,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1135",
+    "reference_patch_sha256": "c18078b8d91d38f27c6a2291f8733bce511c5123b5503a9caaf2fdca7b0e2f9e",
+    "complete_pr_change_files": [
+      {
+        "path": "docs/api-guide.rst",
+        "status": "added",
+        "additions": 28,
+        "deletions": 0
+      },
+      {
+        "path": "docs/conf.py",
+        "status": "modified",
+        "additions": 17,
+        "deletions": 13
+      },
+      {
+        "path": "docs/getting-started.rst",
+        "status": "added",
+        "additions": 9,
+        "deletions": 0
+      },
+      {
+        "path": "docs/guide.rst",
+        "status": "added",
+        "additions": 555,
+        "deletions": 0
+      },
+      {
+        "path": "docs/index.rst",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 574
+      },
+      {
+        "path": "docs/releases.rst",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "requirements/requirements-docs.txt",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1164",
+    "reference_patch_sha256": "b423e215cb046504d40137ead0804e97af0aa44917f10697041fbf59bbe44880",
+    "complete_pr_change_files": [
+      {
+        "path": ".github/workflows/release.yml",
+        "status": "added",
+        "additions": 30,
+        "deletions": 0
+      },
+      {
+        "path": "MANIFEST.in",
+        "status": "removed",
+        "additions": 0,
+        "deletions": 4
+      },
+      {
+        "path": "Makefile",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 11
+      },
+      {
+        "path": "pyproject.toml",
+        "status": "added",
+        "additions": 66,
+        "deletions": 0
+      },
+      {
+        "path": "requirements/requirements-tests.txt",
+        "status": "modified",
+        "additions": 0,
+        "deletions": 2
+      },
+      {
+        "path": "setup.py",
+        "status": "removed",
+        "additions": 0,
+        "deletions": 48
+      },
+      {
+        "path": "tox.ini",
+        "status": "modified",
+        "additions": 9,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1200",
+    "reference_patch_sha256": "77637ee281eab99256bdc72f66442144f90858414afb6aaf47f4582f9483c7a9",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/locales.py",
+        "status": "modified",
+        "additions": 99,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 146,
+        "deletions": 5
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1217",
+    "reference_patch_sha256": "7f369a6bea39619498186caf4a16ecd6536d34f60d5ee737872bdd63d91a050e",
+    "complete_pr_change_files": [
+      {
+        "path": ".gitignore",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 0
+      },
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 10,
+        "deletions": 10
+      },
+      {
+        "path": "arrow/factory.py",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 5
+      },
+      {
+        "path": "arrow/formatter.py",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 4
+      },
+      {
+        "path": "arrow/parser.py",
+        "status": "modified",
+        "additions": 14,
+        "deletions": 8
+      },
+      {
+        "path": "pyproject.toml",
+        "status": "modified",
+        "additions": 3,
+        "deletions": 2
+      },
+      {
+        "path": "requirements/requirements-tests.txt",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 2
+      },
+      {
+        "path": "requirements/requirements.txt",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 0
+      },
+      {
+        "path": "tests/conftest.py",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 2
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 68,
+        "deletions": 62
+      },
+      {
+        "path": "tests/test_factory.py",
+        "status": "modified",
+        "additions": 39,
+        "deletions": 36
+      },
+      {
+        "path": "tests/test_formatter.py",
+        "status": "modified",
+        "additions": 5,
+        "deletions": 5
+      },
+      {
+        "path": "tests/test_parser.py",
+        "status": "modified",
+        "additions": 29,
+        "deletions": 20
+      },
+      {
+        "path": "tests/utils.py",
+        "status": "modified",
+        "additions": 22,
+        "deletions": 2
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1222",
+    "reference_patch_sha256": "636186514e14c74dfb45d397afec535b12452a6c25041dfaf625560d3627f4b6",
+    "complete_pr_change_files": [
+      {
+        "path": "arrow/arrow.py",
+        "status": "modified",
+        "additions": 16,
+        "deletions": 6
+      },
+      {
+        "path": "docs/guide.rst",
+        "status": "modified",
+        "additions": 6,
+        "deletions": 0
+      },
+      {
+        "path": "tests/test_arrow.py",
+        "status": "modified",
+        "additions": 156,
+        "deletions": 0
+      }
+    ]
+  },
+  {
+    "task_id": "pr-1236",
+    "reference_patch_sha256": "f6004b5fcd5d6286b0ef7018f0367ec2b6a8bf67ecaa6fc01168418f2cf18ce1",
+    "complete_pr_change_files": [
+      {
+        "path": "tests/test_locales.py",
+        "status": "modified",
+        "additions": 375,
+        "deletions": 0
+      }
+    ]
+  }
+]

@@ -1,12 +1,18 @@
 # Final study results
 
-`regression/` contains Arrow's final reference-feature results and the two retained scientific sensitivities. `judge/` contains Pro predictions from the shared three-step rubric. `published-summary.json` contains aggregate values reported in the thesis, including Verified, without private per-task outcomes. Older feature revisions and discarded rubric experiments are not included.
+`regression/source_only/` contains Arrow's adopted reference-feature results and
+retained scientific sensitivities; the original complete-PR results remain in
+the other `regression/` subdirectories. `judge/` contains Pro predictions from
+the shared three-step rubric. `published-summary.json` contains the adopted
+regression and Judge aggregates, including Verified, without private per-task
+outcomes. Discarded rubric experiments are not included.
 
-The main Arrow analysis is `regression/arrow_oracle_pass/` (55 tasks).
-The preserved `regression/arrow/` and `regression/arrow_errors_as_failures/`
-results use the extended 59-task set and are sensitivity analyses. The stored
-directory names and historical run metadata are retained; the reporting role is
-specified by `primary_arrow_analysis` in the published summary. Pro's
+The main Arrow analysis is `regression/source_only/arrow_oracle_pass/` (55 tasks).
+Its sibling `arrow/` and `arrow_errors_as_failures/` results use the extended
+59-task set; `arrow_oracle_pass_grouped/` holds 50 base-commit groups together.
+All use source-only features and preserve their original nested splits.
+The reporting role is specified by `primary_arrow_analysis` and `feature_scope`
+in the published summary. Pro's
 complete-coverage sensitivity uses the 381 tasks with 13 valid outcomes.
 `pro_complete_traceable` changes their targets to the nine traceable reports,
 keeping those task IDs and predictions fixed. `pro_constant_half` evaluates a
