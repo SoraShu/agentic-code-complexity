@@ -11,6 +11,7 @@ uv run scripts/build_distribution.py work/full
 Outputs go to `work/full/generated/figures/`. The main generator produces the
 feature-correlation plot, regression fold plot, Judge diagnostics and repository
 correlations. The distribution script produces the fifth empirical figure.
+The Arrow panels use the saved 55-task oracle-pass analysis.
 `verify_figures.py` checks 1,231 Judge points, 20 bins, 80 fold scores, 38 feature
 correlations, 21 repository subsets and the three case overview rows.
 

@@ -59,12 +59,14 @@ def judge_metrics(pred, truth, include_unknown=False):
     return dict(n=len(ids), spearman=float(spearmanr(p, y).statistic),
                 pearson=float(pearsonr(p, y).statistic),
                 mae=float(np.mean(abs(p-y))), mse=float(np.mean((p-y)**2)),
-                mean_prediction=float(p.mean()), mean_observed=float(y.mean()))
+                mean_prediction=float(p.mean()), mean_observed=float(y.mean()),
+                signed_mean_error=float(np.mean(p-y)))
 
 
 def main(workspace):
     root = workspace.resolve()
-    result = {'regression': {}, 'judge': {}, 'outcomes': {}}
+    result = {'regression': {}, 'judge': {}, 'outcomes': {},
+              'primary_arrow_analysis': 'arrow_oracle_pass'}
     reg = root / 'experiments/regression/results'
     scenarios = [(name, reg / 'reference-features-2026-11-09' / name)
                  for name in ('arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures')]
@@ -80,6 +82,9 @@ def main(workspace):
         result['regression'][name] = {'n': len(y), 'metrics': metrics}
     assert result['regression']['arrow']['n'] == 59
     assert abs(result['regression']['arrow']['metrics']['median']['mae_mean'] - .235) < .0005
+    primary = result['regression']['arrow_oracle_pass']
+    assert primary['n'] == 55
+    assert abs(primary['metrics']['xgboost']['mae_mean'] - .30438709601421243) < 1e-12
     if has_private:
         v = result['regression']['verified']
         assert v['n'] == 500
@@ -107,6 +112,10 @@ def main(workspace):
             assert totals['true'] + totals['false'] == 8887
             assert abs(metrics['spearman'] - .568350) < 1e-6
             result['judge']['pro_missing_as_failure'] = judge_metrics(pred, truth, True)
+            complete = {t: r for t, r in pred.items() if truth[t]['true'] + truth[t]['false'] == 13}
+            result['judge']['pro_complete_coverage'] = judge_metrics(complete, truth)
+            assert len(complete) == 381
+            assert abs(result['judge']['pro_complete_coverage']['spearman'] - .6063605635712134) < 1e-12
         else:
             assert totals == Counter(true=9005, false=3936, error=50, missing=9)
             assert abs(metrics['spearman'] - .627477) < 1e-6

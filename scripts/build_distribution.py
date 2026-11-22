@@ -23,7 +23,7 @@ def main(workspace):
     for i,(dataset,run,title) in enumerate([
         ('verified','verified-boolean-outcomes-2026-11-09','SWE-bench Verified'),
         ('arrow','reference-features-2026-11-09','Arrow')]):
-        rows=json.loads((workspace/f'experiments/regression/results/{run}/{dataset}/dataset.json').read_text())['rows']
+        rows=json.loads((workspace/f'experiments/regression/results/{run}/{'arrow_oracle_pass' if dataset=='arrow' else dataset}/dataset.json').read_text())['rows']
         counts=Counter(min(9,10*(r['denominator']-r['n_resolved'])//r['denominator']) for r in rows)
         assert sum(counts.values())==len(rows)
         median=statistics.median(1-r['n_resolved']/r['denominator'] for r in rows)

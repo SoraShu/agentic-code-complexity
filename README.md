@@ -1,7 +1,7 @@
 # Agentic Code Complexity
 
-Code and derived research results for **Agentic Code Complexity: Measuring How
-Hard It Is for Agents to Implement Code Changes**.
+Code and derived research results for **Measuring and Predicting Agentic
+Code Complexity**.
 
 This repository contains the final feature extraction, regression, shared-rubric
 LLM Judge, figure generation and case-analysis code used in the thesis. Internal
@@ -18,8 +18,9 @@ uv run scripts/verify_results.py work/public
 Each entry-point script declares its Python version and dependencies inline; uv
 creates its environment automatically, without a separate project environment.
 
-This checks Arrow's main regression and two sensitivity analyses, and the Pro Judge
-on 731 tasks. It uses this study's saved outputs and derived targets; no model is
+This checks Arrow's 55-task oracle-pass main regression, the two 59-task
+sensitivity analyses, and the Pro Judge on 731 tasks and the 381-task subset
+covered by all 13 historical reports. It uses saved outputs and derived targets; no model is
 trained or called. Public original datasets are obtained separately as described in
 [data/README.md](data/README.md).
 

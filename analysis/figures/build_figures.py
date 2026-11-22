@@ -95,7 +95,7 @@ sys.path.insert(0,str(ROOT/'experiments/regression'))
 import report
 reg={};datasets={};correlations={};oof={}
 for ds,base in [('verified','verified-boolean-outcomes-2026-11-09'),('arrow','reference-features-2026-11-09')]:
-    directory=ROOT/f'experiments/regression/results/{base}/{ds}'
+    directory=ROOT/f'experiments/regression/results/{base}/{'arrow_oracle_pass' if ds=='arrow' else ds}'
     for name in ['dataset.json','splits.json','results.json','oof_predictions.csv']:read(directory/name)
     result=load(directory/'results.json');data=load(directory/'dataset.json');datasets[ds]=data
     rows,y,preds,folds=report.audit(directory,result)
@@ -140,13 +140,13 @@ for row,ds in enumerate(['verified','arrow']):
     y=51 if row==0 else 6
     for col,metric in enumerate(['r2','mae']):
         x=27 if col==0 else 86;w=42
-        opts=('xmin=-1.25,xmax=0.3,xtick={-1,-0.5,0},xlabel={$R^2$ (higher is better)},' if col==0 else 'xmin=0.15,xmax=0.43,xtick={0.2,0.3,0.4},xlabel={MAE (lower is better)},')
+        opts=('xmin=-1.25,xmax=0.3,xtick={-1,-0.5,0},xlabel={$R^2$ (higher is better)},' if col==0 else 'xmin=0.05,xmax=0.45,xtick={0.1,0.2,0.3,0.4},xlabel={MAE (lower is better)},')
         title=f'({chr(97+row*2+col)}) '+('Verified' if ds=='verified' else 'Arrow')
         s+=axis(x,y,w,27,opts+'ymin=-0.5,ymax=3.5,ytick={0,1,2,3},yticklabels={'+(','.join(labels[::-1]) if col==0 else ',,,')+'},xmajorgrids=true,grid style={black!10},title={'+title+'}')
         if metric=='r2':s+=plot([(0,-.5),(0,3.5)],'black!60,dashed,no marks')
         for k,model in enumerate(models):
             v=[f[metric] for f in reg[ds][model]['folds']]
-            lo,hi=(-1.25,.3) if metric=='r2' else (.15,.43)
+            lo,hi=(-1.25,.3) if metric=='r2' else (.05,.45)
             assert all(lo<=z<=hi for z in v),(ds,model,metric,v)
             s+=plot([(z,3-k+(i-2)*.065) for i,z in enumerate(v)],'only marks,mark=*,mark size=1.6pt,verified,opacity=0.65')
             s+=plot([(reg[ds][model][metric+'_mean'],3-k)],'only marks,mark=diamond*,mark size=2.5pt,black,mark options={fill=white,line width=0.9pt}')

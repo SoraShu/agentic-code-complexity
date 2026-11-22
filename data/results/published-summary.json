@@ -751,6 +751,16 @@
       "mse": 0.08386126828461342,
       "mean_prediction": 0.6661795407098121,
       "mean_observed": 0.696222005279825
+    },
+    "pro_complete_coverage": {
+      "n": 381,
+      "spearman": 0.6063605635712134,
+      "pearson": 0.597717474221841,
+      "mae": 0.26085402786190187,
+      "mse": 0.09951427883644721,
+      "mean_prediction": 0.5688451443569553,
+      "mean_observed": 0.35493640218049666,
+      "signed_mean_error": 0.2139087421764587
     }
   },
   "outcomes": {
@@ -788,5 +798,6 @@
         "26": 452
       }
     }
-  }
+  },
+  "primary_arrow_analysis": "arrow_oracle_pass"
 }

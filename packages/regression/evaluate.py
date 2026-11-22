@@ -297,7 +297,7 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--feature-root", type=Path)
     parser.add_argument("--splits-from", type=Path)
-    parser.add_argument("--scenarios", nargs="+", default=["arrow"],
+    parser.add_argument("--scenarios", nargs="+", default=["arrow_oracle_pass"],
                         choices=["verified", "arrow", "arrow_oracle_pass", "arrow_errors_as_failures"])
     args = parser.parse_args()
     assert args.workers > 0

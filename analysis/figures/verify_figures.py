@@ -46,7 +46,7 @@ for k,(ds,fn) in enumerate([('verified','opus47_showtests_run.jsonl'),('pro','pr
 # Fold values: saved OOF predictions; derive the median only from the corresponding training rows.
 blocks=points('regression-fold-performance');cursor=0
 for ds,base in [('verified','verified-boolean-outcomes-2026-11-09'),('arrow','reference-features-2026-11-09')]:
- directory=ROOT/f'experiments/regression/results/{base}/{ds}'
+ directory=ROOT/f'experiments/regression/results/{base}/{'arrow_oracle_pass' if ds=='arrow' else ds}'
  rows=list(csv.DictReader((directory/'oof_predictions.csv').read_text().splitlines()));byid={r['task_id']:r for r in rows}
  folds=json.loads((directory/'splits.json').read_text())
  for metric in ['r2','mae']:
@@ -65,7 +65,7 @@ assert cursor==len(blocks)
 # Correlations preserve the signs, feature identities and available-observation N.
 blocks=points('feature-correlations')
 for index,(ds,base) in enumerate([('verified','verified-boolean-outcomes-2026-11-09'),('arrow','reference-features-2026-11-09')]):
- d=json.loads((ROOT/f'experiments/regression/results/{base}/{ds}/dataset.json').read_text());X=np.array([r['features'] for r in d['rows']],float);y=np.array([r['complexity'] for r in d['rows']]);actual=[]
+ d=json.loads((ROOT/f'experiments/regression/results/{base}/{'arrow_oracle_pass' if ds=='arrow' else ds}/dataset.json').read_text());X=np.array([r['features'] for r in d['rows']],float);y=np.array([r['complexity'] for r in d['rows']]);actual=[]
  for i,f in enumerate(d['feature_names']):
   mask=np.isfinite(X[:,i]);r=data['correlations'][ds][i];assert r['feature']==f and r['n']==mask.sum()
   rho=float(spearmanr(X[mask,i],y[mask]).statistic);pear=float(pearsonr(X[mask,i],y[mask]).statistic)

@@ -10,5 +10,3 @@ instructions are in `data/README.md`; original datasets, patches and source bund
 are not included in this repository.
 
 Benchpress is an internal company repository and is not part of this publication.
-The solver configuration used Harbor's native Copilot integration. The unused
-external Copilot adapter is not included.

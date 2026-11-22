@@ -7,9 +7,9 @@ from pathlib import Path
 import evaluate as ev
 import numpy as np
 
-LABELS = {"verified": "SWE-bench Verified", "arrow": r"\texttt{arrow-py/arrow}",
-          "arrow_oracle_pass": "Arrow (oracle-pass only)",
-          "arrow_errors_as_failures": "Arrow (errors as failures)"}
+LABELS = {"verified": "SWE-bench Verified", "arrow": "Arrow (extended sensitivity, 59)",
+          "arrow_oracle_pass": "Arrow (main, oracle-pass, 55)",
+          "arrow_errors_as_failures": "Arrow (extended, errors as failures, 59)"}
 MODELS = {"baseline": "Baseline (mean)", "lasso": "Lasso", "xgboost": "XGBoost"}
 REPORT_MODELS = {"baseline": "Baseline (mean)", "median": "Baseline (median)",
                  "lasso": "Lasso", "xgboost": "XGBoost"}
