@@ -1,6 +1,6 @@
 {
   "metric": "lines_changed",
-  "definition": "Added plus deleted lines in the complete PR diff, excluding diff headers.",
+  "definition": "Historical prefix count on the complete PR diff: count lines starting with + or -, except any line starting with +++ or ---. This also omits matching content lines and is distinct from the regression lines_changed feature.",
   "ordering": "Descending lines_changed; preserve snapshot order for ties.",
   "source_sha256": "26603db32aa3f8ec0ee878bb655b898f4cd5c97894538c5d75aa9d7c07d8fc94",
   "rows": [

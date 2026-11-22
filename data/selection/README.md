@@ -3,13 +3,26 @@
 `arrow-candidates.txt` contains the 100 construction inputs, in their original
 order. They are the first 100 records after sorting the saved 701-PR screening
 snapshot by `lines_changed` descending, retaining snapshot order for ties.
-The measure counts added plus deleted lines in the complete PR diff, excluding
-diff headers; it is not patch byte size or a sum over individual commit patches.
-The selected boundary is 135 changed lines; the next PR has 133.
+The historical parser counts lines in the complete PR diff beginning with `+`
+or `-`, except any line beginning with `+++` or `---`. This prefix rule omits
+file headers but also some changed content, such as documentation separators.
+The selected boundary is 135 by this historical count; the next PR has 133.
+It is not patch byte size or a sum over individual commit patches.
+
+The screening measure is distinct from the regression feature `lines_changed`,
+which includes these content lines. Hash-matched reference diffs give the
+following comparisons (independently checked with `git apply --numstat`):
+
+| PR | Historical screening count | Changed lines / regression feature |
+|---|---:|---:|
+| 608 | 433 | 444 |
+| 647 | 159 | 161 |
+| 791 | 140 | 141 |
+| 1135 | 1208 | 1213 |
 
 `arrow-screening.json` contains the 701 derived line counts and the original
-metric-snapshot SHA-256. All 100 selected counts also match the retained
-construction diff texts. The selection does not impose a merged-only filter.
+metric-snapshot SHA-256. Applying the historical prefix rule to the retained
+construction diffs reproduces all 100 selected counts. The selection does not impose a merged-only filter.
 The separately retained `arrow_labels*.jsonl` are exploratory labelling outputs;
 the construction list is reproduced without using those labels.
 

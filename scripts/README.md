@@ -23,6 +23,7 @@ environment. Those source modules must remain in the repository.
 |---|---|
 | `prepare_workspace.py` | Copy final derived artifacts and optional authorized Verified data into ignored `work/` |
 | `verify_results.py` | Recompute saved regression and Judge metrics, including the retained scientific sensitivities |
+| `run_arrow_grouped.py` | Refit only Arrow Lasso/XGBoost on the saved 55 tasks using 50 base-commit groups at both nested CV levels; write a new directory under `work/` |
 | `fetch_pro_reports.py` | Download and hash-check the nine matched public Pro reports; no model calls |
 | `aggregate_pro_targets.py` | Rebuild the 731 Pro targets from 13 reports, or the matched 381-task nine-report sensitivity with `--traceable-only` |
 | `verify_arrow_selection.py` | Check the saved 701→100→73→55 Arrow selection and construction categories |

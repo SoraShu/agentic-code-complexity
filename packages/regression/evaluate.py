@@ -28,7 +28,7 @@ from joblib import parallel_config
 from sklearn.linear_model import Lasso
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_absolute_error, r2_score
-from sklearn.model_selection import GridSearchCV, KFold, ParameterGrid
+from sklearn.model_selection import GridSearchCV, GroupKFold, KFold, ParameterGrid
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from xgboost import XGBRegressor
@@ -216,9 +216,59 @@ def summarize(y, predictions, folds):
     return result
 
 
-def run(name, policy, output, workers, seed, feature_root=None, splits_from=None):
-    rows, X, y, excluded = load_dataset(name, policy, feature_root)
+def nested_splits(ids, seed, groups=None):
+    """Return task-ID splits; a group is held together at both CV levels."""
+    def split(indices):
+        if groups is None:
+            return KFold(5, shuffle=True, random_state=seed).split(indices)
+        labels = [groups[ids[j]] for j in indices]
+        return GroupKFold(5, shuffle=True, random_state=seed).split(indices, groups=labels)
+
+    return [
+        {"fold": i + 1, "train_ids": [ids[j] for j in train], "test_ids": [ids[j] for j in test],
+         "inner_splits": [
+             {"train_ids": [ids[train[j]] for j in itrain],
+              "validation_ids": [ids[train[j]] for j in ival]}
+             for itrain, ival in split(train)]}
+        for i, (train, test) in enumerate(split(np.arange(len(ids))))]
+
+
+def validate_splits(ids, saved_splits, groups=None):
+    """Check coverage and isolation before fitting, including inner validation."""
+    assert len(ids) == len(set(ids))
+    if groups is not None:
+        assert set(groups) == set(ids)
+    tests = []
+    for s in saved_splits:
+        train, test = set(s['train_ids']), set(s['test_ids'])
+        assert not train & test and train | test == set(ids)
+        tests.extend(s['test_ids'])
+        validations = []
+        for inner in s['inner_splits']:
+            a, b = set(inner['train_ids']), set(inner['validation_ids'])
+            assert not a & b and a | b == train
+            validations.extend(inner['validation_ids'])
+            if groups is not None:
+                assert not {groups[t] for t in a} & {groups[t] for t in b}
+        assert sorted(validations) == sorted(train)
+        if groups is not None:
+            assert not {groups[t] for t in train} & {groups[t] for t in test}
+    assert sorted(tests) == sorted(ids)
+
+
+def run(name, policy, output, workers, seed, feature_root=None, splits_from=None,
+        dataset_snapshot=None, groups=None):
+    if dataset_snapshot is None:
+        rows, X, y, excluded = load_dataset(name, policy, feature_root)
+    else:
+        assert dataset_snapshot['feature_names'] == FEATURES
+        rows, excluded = dataset_snapshot['rows'], dataset_snapshot['excluded']
+        X = np.asarray([r['features'] for r in rows], dtype=float)
+        y = np.asarray([r['complexity'] for r in rows])
     tag = name if name == "verified" or policy == "historical" else f"arrow_{policy}"
+    if groups is not None:
+        assert name == 'arrow' and policy == 'oracle_pass' and splits_from is None
+        tag += '_grouped'
     destination = output / tag
     destination.mkdir(parents=True, exist_ok=False)
     ids = [r["task_id"] for r in rows]
@@ -229,17 +279,12 @@ def run(name, policy, output, workers, seed, feature_root=None, splits_from=None
         for old, new in zip(previous["rows"], rows, strict=True):
             assert {k: v for k, v in old.items() if k != "features"} == {k: v for k, v in new.items() if k != "features"}
         saved_splits = json.loads((Path(splits_from) / tag / "splits.json").read_text())
-        lookup = {task: i for i, task in enumerate(ids)}
-        folds = [(np.asarray([lookup[t] for t in s["train_ids"]]),
-                  np.asarray([lookup[t] for t in s["test_ids"]])) for s in saved_splits]
     else:
-        folds = list(KFold(n_splits=5, shuffle=True, random_state=seed).split(X))
-        saved_splits = [
-            {"fold": i + 1, "train_ids": [ids[j] for j in train], "test_ids": [ids[j] for j in test],
-             "inner_splits": [
-                 {"train_ids": [ids[train[j]] for j in itrain], "validation_ids": [ids[train[j]] for j in ival]}
-                 for itrain, ival in KFold(n_splits=5, shuffle=True, random_state=seed).split(train)]}
-            for i, (train, test) in enumerate(folds)]
+        saved_splits = nested_splits(ids, seed, groups)
+    validate_splits(ids, saved_splits, groups)
+    lookup = {task: i for i, task in enumerate(ids)}
+    folds = [(np.asarray([lookup[t] for t in s["train_ids"]]),
+              np.asarray([lookup[t] for t in s["test_ids"]])) for s in saved_splits]
     dump(destination / "dataset.json", {"feature_names": FEATURES, "rows": rows, "excluded": excluded})
     dump(destination / "splits.json", saved_splits)
     predictions = {model: np.full(len(y), np.nan) for model in ("baseline", "lasso", "xgboost")}

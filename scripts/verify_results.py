@@ -70,7 +70,8 @@ def main(workspace):
               'primary_arrow_analysis': 'arrow_oracle_pass'}
     reg = root / 'experiments/regression/results'
     scenarios = [(name, reg / 'reference-features-2026-11-09' / name)
-                 for name in ('arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures')]
+                 for name in ('arrow', 'arrow_oracle_pass', 'arrow_errors_as_failures',
+                              'arrow_oracle_pass_grouped')]
     verified = reg / 'verified-boolean-outcomes-2026-11-09/verified'
     has_private = verified.is_dir()
     if has_private:
@@ -81,6 +82,22 @@ def main(workspace):
         _, y, p, folds = report.audit(folder, saved)
         _, metrics = report.with_median(y, p, folds)
         result['regression'][name] = {'n': len(y), 'metrics': metrics}
+        if name == 'arrow_oracle_pass_grouped':
+            data = json.loads((folder/'dataset.json').read_text())
+            original = json.loads((folder.with_name('arrow_oracle_pass')/'dataset.json').read_text())
+            assert data == original, 'Grouped sensitivity must preserve all main-analysis inputs'
+            groups = json.loads((folder/'groups.json').read_text())['task_groups']
+            ids = [r['task_id'] for r in data['rows']]
+            refs = json.loads((REPO/'data/reference-inputs.json').read_text())
+            expected = {r['task_id']: r['repo']+'@'+r['base_commit'] for r in refs
+                        if r['dataset'] == 'arrow' and r['task_id'] in ids}
+            assert groups == expected and len(set(groups.values())) == 50
+            report.ev.validate_splits(ids, json.loads((folder/'splits.json').read_text()), groups)
+            recorded = json.loads((folder/'metrics_with_median.json').read_text())
+            for model, values in metrics.items():
+                for metric in ['mae_mean', 'mae_std', 'r2_mean', 'r2_std']:
+                    assert abs(values[metric]-recorded[model][metric]) < 1e-12
+            result['regression'][name]['n_groups'] = 50
     assert result['regression']['arrow']['n'] == 59
     assert abs(result['regression']['arrow']['metrics']['median']['mae_mean'] - .235) < .0005
     primary = result['regression']['arrow_oracle_pass']

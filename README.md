@@ -19,7 +19,7 @@ Each entry-point script declares its Python version and dependencies inline; uv
 creates its environment automatically, without a separate project environment.
 
 This checks Arrow's 55-task oracle-pass main regression, the two 59-task
-sensitivity analyses, and the Pro Judge on 731 tasks and the 381-task subset
+sensitivity analyses, the 55-task/50-base-commit grouped sensitivity, and the Pro Judge on 731 tasks and the 381-task subset
 covered by all 13 historical reports. It also checks a fixed 0.50 prediction and
 the nine traceable reports on the same 381 tasks. It uses saved outputs and derived targets; no model is
 trained or called. Public original datasets are obtained separately as described in
@@ -27,6 +27,12 @@ trained or called. Public original datasets are obtained separately as described
 
 `uv run scripts/verify_arrow_selection.py` checks Arrow's 701-PR screening
 snapshot, 100 construction inputs, 73 constructed tasks and 55 oracle passes.
+
+To refit only Arrow's grouped sensitivity with the complete original search
+grids, run `uv run scripts/run_arrow_grouped.py --output work/arrow-grouped-new`.
+It reads the saved features and targets, holds each base-commit group together
+in both nested CV levels, and writes a new result directory. It does not call a
+solving agent or Judge. See [the grouped results](data/results/regression/arrow_oracle_pass_grouped/README.md).
 
 Verified's historical Microsoft outcome reports and task-level results are private.
 With an authorized local copy, additionally run:

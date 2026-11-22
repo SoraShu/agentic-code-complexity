@@ -103,7 +103,11 @@ def fetch_bytes(url: str) -> bytes:
 
 
 def parse_patch(patch_text: str):
-    """从 patch 内容解析 files_changed 和 lines_changed。"""
+    """Historical screening count; also excludes content starting +++ or ---.
+
+    Preserve this rule to reproduce the saved 100-PR cohort. It is distinct
+    from the regression feature that includes all added/deleted content lines.
+    """
     files_changed = 0
     lines_added = 0
     lines_deleted = 0
