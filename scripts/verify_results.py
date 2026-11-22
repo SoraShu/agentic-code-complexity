@@ -56,8 +56,9 @@ def judge_metrics(pred, truth, include_unknown=False):
     p = np.array([pred[t]['p_success'] for t in ids])
     y = np.array([truth[t]['true'] / (sum(truth[t].values()) if include_unknown
                  else truth[t]['true'] + truth[t]['false']) for t in ids])
-    return dict(n=len(ids), spearman=float(spearmanr(p, y).statistic),
-                pearson=float(pearsonr(p, y).statistic),
+    constant = bool(np.ptp(p) == 0)
+    return dict(n=len(ids), spearman=None if constant else float(spearmanr(p, y).statistic),
+                pearson=None if constant else float(pearsonr(p, y).statistic),
                 mae=float(np.mean(abs(p-y))), mse=float(np.mean((p-y)**2)),
                 mean_prediction=float(p.mean()), mean_observed=float(y.mean()),
                 signed_mean_error=float(np.mean(p-y)))
@@ -116,6 +117,20 @@ def main(workspace):
             result['judge']['pro_complete_coverage'] = judge_metrics(complete, truth)
             assert len(complete) == 381
             assert abs(result['judge']['pro_complete_coverage']['spearman'] - .6063605635712134) < 1e-12
+            reference = {t: {'p_success': .5} for t in pred}
+            result['judge']['pro_constant_half'] = judge_metrics(reference, truth)
+            assert abs(result['judge']['pro_constant_half']['mae'] - .28412383330303986) < 1e-12
+            matched_rows = json.loads((root/'localdataset/data/pro-complete-traceable.json').read_text())
+            assert len(matched_rows) == len({r['instance_id'] for r in matched_rows}) == 381
+            assert {r['instance_id'] for r in matched_rows} == set(complete)
+            assert all(r['n_valid'] == r['n_reports'] == 9 and r['n_errors'] == r['n_missing'] == 0
+                       and 0 <= r['n_resolved'] <= 9 for r in matched_rows)
+            matched_truth = {r['instance_id']: Counter(true=r['n_resolved'], false=9-r['n_resolved'])
+                             for r in matched_rows}
+            matched = judge_metrics(complete, matched_truth)
+            result['judge']['pro_complete_traceable'] = matched
+            assert abs(matched['spearman'] - .5625997661674826) < 1e-12
+            assert abs(matched['mae'] - .3352085156022164) < 1e-12
         else:
             assert totals == Counter(true=9005, false=3936, error=50, missing=9)
             assert abs(metrics['spearman'] - .627477) < 1e-6

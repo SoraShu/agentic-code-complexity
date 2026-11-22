@@ -1,0 +1,506 @@
+{
+  "description": "Recorded terminal construction categories, not inferred root causes. Original internal build logs are retained separately.",
+  "summary_sha256": "a9f54a85b97cc22d013b1e508d7e360beff1aaacdcc1ccfe065d43b151e47f58",
+  "rows": [
+    {
+      "pr_number": 751,
+      "construction": "scaffold_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 587,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 898,
+      "construction": "issue_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 876,
+      "construction": "issue_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 883,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 740,
+      "construction": "scaffold_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1135,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 655,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 956,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 800,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 850,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 733,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 605,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 765,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1163,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 639,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 591,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 877,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 895,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 608,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 970,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 841,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1236,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1217,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 609,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 387,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 846,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 583,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 327,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 910,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 458,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 954,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 744,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 888,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 798,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 1073,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 1141,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 342,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 11,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1200,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1093,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1092,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 646,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 414,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 1044,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1043,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 166,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 602,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 562,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 385,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 748,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 472,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 284,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 1098,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 673,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 231,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 758,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 383,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 722,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 349,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 799,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 679,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 849,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1222,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 823,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 372,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 641,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 992,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 802,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1164,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 724,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 1105,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1010,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 388,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 418,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1075,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 887,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 276,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 647,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 640,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 745,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 700,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 579,
+      "construction": "constructed",
+      "oracle_pass": false
+    },
+    {
+      "pr_number": 817,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 761,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 731,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1096,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1076,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1080,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1003,
+      "construction": "implementation_reported_failure",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1088,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 891,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 1004,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 791,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 1069,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 775,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 770,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 772,
+      "construction": "constructed",
+      "oracle_pass": true
+    },
+    {
+      "pr_number": 574,
+      "construction": "implementation_exit",
+      "oracle_pass": null
+    },
+    {
+      "pr_number": 102,
+      "construction": "constructed",
+      "oracle_pass": true
+    }
+  ]
+}

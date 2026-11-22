@@ -1,6 +1,8 @@
 # arrow
 
-Primary outcome policy; 59 tasks.
+Extended sensitivity analysis; 59 tasks. The main analysis is the 55-task
+`../arrow_oracle_pass/` cohort. This extension additionally includes four
+oracle-fail tasks with recorded agent success.
 
 - `dataset.json`: feature names, task rows and empirical complexities.
 - `splits.json`: preserved outer and inner task-ID splits.

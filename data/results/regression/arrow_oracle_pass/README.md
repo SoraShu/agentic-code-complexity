@@ -1,6 +1,8 @@
 # arrow_oracle_pass
 
-Oracle-pass-only sensitivity; 55 tasks.
+Main Arrow analysis; 55 tasks selected by passing reference execution,
+independently of solving-agent outcomes. The 59-task `../arrow/` cohort is an
+extended sensitivity analysis.
 
 - `dataset.json`: feature names, task rows and empirical complexities.
 - `splits.json`: preserved outer and inner task-ID splits.

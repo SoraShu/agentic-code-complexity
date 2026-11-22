@@ -124,9 +124,15 @@
     "repository": "https://github.com/arrow-py/arrow",
     "reference_inputs": "reference-inputs.json",
     "candidate_tasks": 73,
-    "analysis_tasks": 59,
+    "analysis_tasks": 55,
     "solver": "Harbor native copilot-cli",
     "model": "gpt-5.4",
-    "construction_tool": "Internal Benchpress; not distributed"
+    "construction_tool": "Internal Benchpress; not distributed",
+    "screened_prs": 701,
+    "construction_inputs": 100,
+    "extended_sensitivity_tasks": 59,
+    "selection_metric": "Added plus deleted lines in the complete PR diff",
+    "selection_evidence": "selection/arrow-screening.json",
+    "construction_evidence": "selection/arrow-construction.json"
   }
 }

@@ -14,13 +14,15 @@ import shutil
 REPO = Path(__file__).resolve().parents[1]
 
 
-def merge(source, target):
+def merge(source, target, include_readmes=True):
     source, target = Path(source), Path(target)
     if not source.exists():
         raise FileNotFoundError(source)
     files = [source] if source.is_file() else sorted(source.rglob('*'))
     for src in files:
         if not src.is_file() or {'.venv', '__pycache__', '.pytest_cache'}.intersection(src.parts):
+            continue
+        if not include_readmes and src.name == 'README.md':
             continue
         if src.is_symlink():
             raise ValueError(f'Symlink input: {src}')
@@ -55,11 +57,15 @@ def prepare(destination, private_root=None):
                            ('packages/judge','localdataset')]:
         merge(REPO/source, destination/target)
     reg = destination/'experiments/regression'
-    merge(REPO/'data/features', reg/'inputs-reference')
-    merge(REPO/'data/features', reg/'inputs')
-    merge(REPO/'data/outcomes/arrow', reg/'inputs/arrow')
+    # Features and outcomes share inputs/arrow, but their source READMEs differ.
+    # Keep those descriptions in the repository instead of colliding in work/.
+    merge(REPO/'data/features', reg/'inputs-reference', include_readmes=False)
+    merge(REPO/'data/features', reg/'inputs', include_readmes=False)
+    merge(REPO/'data/outcomes/arrow', reg/'inputs/arrow', include_readmes=False)
     merge(REPO/'data/results/regression', reg/'results/reference-features-2026-11-09')
     merge(REPO/'data/targets/pro.json', destination/'localdataset/data/pro-targets.json')
+    merge(REPO/'data/targets/pro-complete-traceable.json',
+          destination/'localdataset/data/pro-complete-traceable.json')
     merge(REPO/'data/results/judge/pro-zero-shot.jsonl',
           destination/'localdataset/results/judge/pro_opus47_showtests.jsonl')
     if private:

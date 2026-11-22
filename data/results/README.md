@@ -8,3 +8,6 @@ results use the extended 59-task set and are sensitivity analyses. The stored
 directory names and historical run metadata are retained; the reporting role is
 specified by `primary_arrow_analysis` in the published summary. Pro's
 complete-coverage sensitivity uses the 381 tasks with 13 valid outcomes.
+`pro_complete_traceable` changes their targets to the nine traceable reports,
+keeping those task IDs and predictions fixed. `pro_constant_half` evaluates a
+fixed probability of 0.50 on all 731 tasks; its correlations are JSON null.

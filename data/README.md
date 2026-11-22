@@ -8,8 +8,9 @@ obtainable original datasets. See each subdirectory's README for field definitio
 | `features/` | Final 19-feature extraction for 500 Verified and 73 Arrow candidates |
 | `outcomes/arrow/` | This study's ten solver-run summaries and oracle evaluation |
 | `targets/pro.json` | This study's 731 task-level aggregates from 13 public outcome reports |
+| `targets/pro-complete-traceable.json` | Nine-report aggregates for the same 381 tasks covered by all 13 reports |
 | `results/` | Final Arrow OOF predictions/folds, Pro Judge predictions and published aggregates |
-| `selection/` | Arrow candidate IDs and the saved PR labels |
+| `selection/` | Arrow screening counts, 100 construction outcomes, candidate IDs and saved PR labels |
 | `reference-inputs.json` | Task/repository/base identities, source-file and reference-patch hashes; no code text |
 | `sources.json` | Official source URLs, benchmark configurations, pinned Pro result commit and report hashes |
 
@@ -69,6 +70,17 @@ This downloads the **nine independently matched** Scale AI reports at commit
 `66f92766bba642462d4bbe5479e83f91f9211862` and converts them to the expected CSV
 schema. Both upstream bytes and converted CSVs are checked. Step/token zeros are
 conversion placeholders, not measured resource use.
+
+These nine reports suffice to reproduce the report-population sensitivity:
+
+```bash
+uv run scripts/aggregate_pro_targets.py --reports work/pro-reports --traceable-only \
+  --output work/rebuilt-pro-complete-traceable.json
+```
+
+The script uses the 381 complete-coverage task IDs from `targets/pro.json` and
+checks equality with `targets/pro-complete-traceable.json`. It uses the same
+saved Judge predictions as the 13-report comparison.
 
 Four other historical reports were identified by the author as originating from
 Scale AI, but their exact upstream run mapping was not recovered. Their identifiers

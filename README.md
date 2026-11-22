@@ -20,9 +20,13 @@ creates its environment automatically, without a separate project environment.
 
 This checks Arrow's 55-task oracle-pass main regression, the two 59-task
 sensitivity analyses, and the Pro Judge on 731 tasks and the 381-task subset
-covered by all 13 historical reports. It uses saved outputs and derived targets; no model is
+covered by all 13 historical reports. It also checks a fixed 0.50 prediction and
+the nine traceable reports on the same 381 tasks. It uses saved outputs and derived targets; no model is
 trained or called. Public original datasets are obtained separately as described in
 [data/README.md](data/README.md).
+
+`uv run scripts/verify_arrow_selection.py` checks Arrow's 701-PR screening
+snapshot, 100 construction inputs, 73 constructed tasks and 55 oracle passes.
 
 Verified's historical Microsoft outcome reports and task-level results are private.
 With an authorized local copy, additionally run:

@@ -714,7 +714,8 @@
       "mae": 0.279999213432866,
       "mse": 0.11343601843718219,
       "mean_prediction": 0.5694801641586869,
-      "mean_observed": 0.3359207140328891
+      "mean_observed": 0.3359207140328891,
+      "signed_mean_error": 0.2335594501257976
     },
     "pro_missing_as_failure": {
       "n": 731,
@@ -723,7 +724,8 @@
       "mae": 0.2799642962296861,
       "mse": 0.11340101815833069,
       "mean_prediction": 0.5694801641586869,
-      "mean_observed": 0.33571168913166183
+      "mean_observed": 0.33571168913166183,
+      "signed_mean_error": 0.23376847502702494
     },
     "verified": {
       "n": 500,
@@ -761,6 +763,26 @@
       "mean_prediction": 0.5688451443569553,
       "mean_observed": 0.35493640218049666,
       "signed_mean_error": 0.2139087421764587
+    },
+    "pro_constant_half": {
+      "n": 731,
+      "spearman": null,
+      "pearson": null,
+      "mae": 0.28412383330303986,
+      "mse": 0.10967598954678393,
+      "mean_prediction": 0.5,
+      "mean_observed": 0.3359207140328891,
+      "signed_mean_error": 0.16407928596711086
+    },
+    "pro_complete_traceable": {
+      "n": 381,
+      "spearman": 0.5625997661674826,
+      "pearson": 0.5413356053442928,
+      "mae": 0.3352085156022164,
+      "mse": 0.14853245520235897,
+      "mean_prediction": 0.5688451443569553,
+      "mean_observed": 0.26246719160104987,
+      "signed_mean_error": 0.3063779527559055
     }
   },
   "outcomes": {
