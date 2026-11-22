@@ -1,0 +1,7 @@
+# Preserve archived bytes (including CSV/Windows CRLF) on every platform.
+* -text
+# Large saved data are reviewed through hashes and the verification scripts.
+data/** -diff
+*.tar.gz binary
+*.gz binary
+*.pdf binary

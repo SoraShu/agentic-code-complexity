@@ -1,0 +1,132 @@
+{
+  "verified": {
+    "dataset": "princeton-nlp/SWE-bench_Verified",
+    "url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified",
+    "split": "test",
+    "n": 500
+  },
+  "pro": {
+    "dataset": "ScaleAI/SWE-bench_Pro",
+    "url": "https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro",
+    "config": "v1",
+    "split": "test",
+    "n": 731,
+    "evaluation_commit": "66f92766bba642462d4bbe5479e83f91f9211862",
+    "downloadable_reports": [
+      {
+        "model": "claude-45sonnet-10132025",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/claude-45sonnet-10132025/eval_results.json",
+        "sha256": "be41a61edff6eb1295db22d1d02e352670dad636484b9efc969e6fc866c554c3"
+      },
+      {
+        "model": "claude-4sonnet-10132025",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/claude-4sonnet-10132025/eval_results.json",
+        "sha256": "e865c3d452c596414a945c296a4f901dbacc36d4bc5ed585b849482d3803341c"
+      },
+      {
+        "model": "claude-opus-4-1-paper",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/claude-opus-4-1-paper/eval_results.json",
+        "sha256": "2a83f8770e9b7cf5a725a8e93764ac1697d31e13c5b8282b57a389382096a8b1"
+      },
+      {
+        "model": "claude-sonnet-4-paper",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/claude-sonnet-4-paper/eval_results.json",
+        "sha256": "bb82fa799fe50fa8777e0441dc8562e8f1fec67e82915b537b3d3215fb01bb58"
+      },
+      {
+        "model": "gemini-2-5-pro-preview-paper",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/gemini-2-5-pro-preview-paper/eval_results.json",
+        "sha256": "30c8f65d9139e565abd22e29721e0f990c95a2f3d9985203d7a1a0caf5bf9d2b"
+      },
+      {
+        "model": "gpt-4o-paper",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/gpt-4o-paper/eval_results.json",
+        "sha256": "fbab43562570c4f5c594bca67b1cba32cf6b4b4b691482b748f9bafcbcfcb695"
+      },
+      {
+        "model": "gpt-5-250-turns-10132025",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/gpt-5-250-turns-10132025/eval_results.json",
+        "sha256": "675412cc36de1da0f6829b8ec3784ce023efe7ecf631a64515f2fb641885438a"
+      },
+      {
+        "model": "gptoss-paper",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/gptoss-paper/eval_results.json",
+        "sha256": "808663e9fcc79b70322359d43bcddb126f5a6c327c723200928bde8e8a3c733d"
+      },
+      {
+        "model": "kimi-k2-instruct-10132025",
+        "url": "https://raw.githubusercontent.com/scaleapi/SWE-bench_Pro-os/66f92766bba642462d4bbe5479e83f91f9211862/traj/kimi-k2-instruct-10132025/eval_results.json",
+        "sha256": "75ff39101d9f79e46dcd7bad27bb4238e0984fac1136d395da7fca62ce6dec42"
+      }
+    ],
+    "historical_report_hashes": [
+      {
+        "file": "report-22890118178.csv",
+        "sha256": "5b29293a60b22529f7964c96a068bcaa50b5e85c35354818ff679a2ec60ae470"
+      },
+      {
+        "file": "report-24651782367.csv",
+        "sha256": "bde0c909481005333d7ba6e7d940515fa338b057bbb749806c49c93d3ee9b17c"
+      },
+      {
+        "file": "report-63908633917786.csv",
+        "sha256": "956e0c3769a4e5fb5ab281347795749b8dc018cedfb92197c1799448c6fb4ef0"
+      },
+      {
+        "file": "report-63908633950023.csv",
+        "sha256": "f1e996c0b3ee5ca9c25e9df729818a110dac21c79068fff82148782b616523a0"
+      },
+      {
+        "file": "report-scaleai-claude-45sonnet-10132025.csv",
+        "sha256": "802ff0405287ce2360dfcb05c47f769d9254ffc2c9a71837a9b3046f9e605c4f"
+      },
+      {
+        "file": "report-scaleai-claude-4sonnet-10132025.csv",
+        "sha256": "f9f0a21011237a2f8946f47691c27c531cef3f298b3d7c135f852b2c48651b27"
+      },
+      {
+        "file": "report-scaleai-claude-opus-4-1-paper.csv",
+        "sha256": "a41a0b44dddabcf76121c356e4ae7294b24408390195e9574a594dd51943bd17"
+      },
+      {
+        "file": "report-scaleai-claude-sonnet-4-paper.csv",
+        "sha256": "967147ec63862242169faf2ad8e98be5be58182108978d1ea4bb2300b421ad54"
+      },
+      {
+        "file": "report-scaleai-gemini-2-5-pro-preview-paper.csv",
+        "sha256": "c7a8b95dea91695db84790b35906aeb9352fe5daaba83dddbbbf384e0addbcbd"
+      },
+      {
+        "file": "report-scaleai-gpt-4o-paper.csv",
+        "sha256": "fe4c07bc363fa6542ca566696b4c388f766dcb41d87afc2bb50af8f2ac46f65f"
+      },
+      {
+        "file": "report-scaleai-gpt-5-250-turns-10132025.csv",
+        "sha256": "3b9b0f44b25124e81dbf56aef26d79830ff0a3f716402bc744827d74aa8280d3"
+      },
+      {
+        "file": "report-scaleai-gptoss-paper.csv",
+        "sha256": "d0462a951e50fd14c013719ec68197889d6f892f33110901b895b769ac8d938e"
+      },
+      {
+        "file": "report-scaleai-kimi-k2-instruct-10132025.csv",
+        "sha256": "ea3a1b90f19e4638d7d119ebbe183236205db1e2809f76a4b945289138c1899e"
+      }
+    ],
+    "unmapped_reports": [
+      "report-22890118178.csv",
+      "report-24651782367.csv",
+      "report-63908633917786.csv",
+      "report-63908633950023.csv"
+    ]
+  },
+  "arrow": {
+    "repository": "https://github.com/arrow-py/arrow",
+    "reference_inputs": "reference-inputs.json",
+    "candidate_tasks": 73,
+    "analysis_tasks": 59,
+    "solver": "Harbor native copilot-cli",
+    "model": "gpt-5.4",
+    "construction_tool": "Internal Benchpress; not distributed"
+  }
+}

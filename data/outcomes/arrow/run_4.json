@@ -1,0 +1,104 @@
+{
+    "id": "a49cc844-99b0-4609-9ae7-0d21b2d29cc3",
+    "started_at": "2026-04-21T12:27:12.631298",
+    "finished_at": "2026-04-21T13:46:33.301170",
+    "n_total_trials": 73,
+    "stats": {
+        "n_trials": 73,
+        "n_errors": 0,
+        "evals": {
+            "copilot-cli__harbor": {
+                "n_trials": 73,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.6027397260273972
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "pr-372__pzExTox",
+                            "pr-1093__HAJQCS8",
+                            "pr-1004__qtj9wwf",
+                            "pr-1044__QQUDKB9",
+                            "pr-327__UeXQ4WG",
+                            "pr-1135__zvRz7s4",
+                            "pr-284__m9Wn5eY",
+                            "pr-414__5G73y3o",
+                            "pr-166__9CusSaY",
+                            "pr-1092__G6uRQ9o",
+                            "pr-1105__eZEHdqm",
+                            "pr-910__Cj5zD3f",
+                            "pr-458__iHFXWq9",
+                            "pr-673__GmC48aX",
+                            "pr-817__gVRVKak",
+                            "pr-1073__AkWF6zK",
+                            "pr-591__2Qc8AXp",
+                            "pr-342__ub2AXLj",
+                            "pr-1096__43TdB8n",
+                            "pr-579__vAUings",
+                            "pr-646__yRPJ5wc",
+                            "pr-956__74gsLTx",
+                            "pr-724__tHEGwE7",
+                            "pr-608__EJwLNPP",
+                            "pr-799__QjR4Zva",
+                            "pr-970__e2nVfFT",
+                            "pr-888__Ay9zBSd",
+                            "pr-388__ybc28Uj",
+                            "pr-722__bLqPEkH"
+                        ],
+                        "1.0": [
+                            "pr-679__JWkVaGJ",
+                            "pr-761__Qz82Q4z",
+                            "pr-841__xHU8iHN",
+                            "pr-1164__qtLkMTh",
+                            "pr-1010__cc5YfxK",
+                            "pr-1076__Jj9rMbs",
+                            "pr-887__Atb3Vnh",
+                            "pr-655__M7oSjuc",
+                            "pr-791__e95VRFH",
+                            "pr-231__dnyjwTp",
+                            "pr-772__mDcrjdn",
+                            "pr-1043__Adpbkeo",
+                            "pr-744__eNBaEWn",
+                            "pr-1088__yrcLoBv",
+                            "pr-1098__oEEvkys",
+                            "pr-1222__hPAaQSB",
+                            "pr-583__wXjBmDS",
+                            "pr-745__TMntzCa",
+                            "pr-418__GZr79fc",
+                            "pr-602__uUoEutt",
+                            "pr-276__ZQYqNud",
+                            "pr-954__nT3t4AZ",
+                            "pr-1236__ZfZWFaz",
+                            "pr-775__jH6DLkC",
+                            "pr-731__fr7ZRyA",
+                            "pr-770__DrNiVCf",
+                            "pr-387__4RYfmFe",
+                            "pr-748__rLsqrBm",
+                            "pr-640__RqXLdgi",
+                            "pr-700__fMbNBb5",
+                            "pr-385__zqS5scE",
+                            "pr-1217__aNSJT4D",
+                            "pr-383__teTHX7m",
+                            "pr-1069__SKRswgN",
+                            "pr-802__x3UFTom",
+                            "pr-349__2K73TMi",
+                            "pr-849__nmqWhiV",
+                            "pr-758__5P8DqWh",
+                            "pr-798__8VLgfS2",
+                            "pr-102__zPt5Wiu",
+                            "pr-647__DDUNdFD",
+                            "pr-609__Ej5C2Yj",
+                            "pr-1200__TuuBfaV",
+                            "pr-562__GjVnBfu"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}
